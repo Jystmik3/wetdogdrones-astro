@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Holly Hills Elementary School | Construction Progress | Wet Dog Drones">
+  <section class="bg-slate-900 text-white py-12">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="flex flex-wrap gap-2 mb-6">
+        <a href="/hhes/20260323" class="bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition">2026-03-23</a>
+        <a href="/hhes/20260309" class="bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition">2026-03-09</a>
+        <a href="/hhes/20260223" class="bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition">2026-02-23</a>
+        <a href="/hhes/20260209" class="bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition">2026-02-09</a>
+        <a href="/hhes/20260126" class="bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition">2026-01-26</a>
+        <a href="/hhes/20260112" class="bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition">2026-01-12</a>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Holly Hills Elementary School</h1>
+      <p class="text-slate-300">Construction progress documentation with before/after comparisons</p>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold mb-4">That Was Then / This Is Now</h2>
+        <p class="text-slate-600 mb-6">Drag the slider to compare construction progress. February 2026 vs March 2026.</p>
+      </div>
+      
+      <!-- Twenty20 Container -->
+      <div class="twenty20-container mx-auto" style="max-width: 100%;">
+        <img src="/images/case-studies/hhes-before.webp" alt="Holly Hills - February 2026" />
+        <img src="/images/case-studies/hhes-after.webp" alt="Holly Hills - March 2026" />
+      </div>
+      
+      <div class="flex justify-between mt-4 text-sm text-slate-500">
+        <span>Before: February 23, 2026</span>
+        <span>After: March 9, 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-slate-50">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <h2 class="text-2xl font-bold mb-6">Project Details</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-semibold mb-2">Location</h3>
+          <p class="text-slate-600">Holly Hills Elementary School, Colorado</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Services Provided</h3>
+          <p class="text-slate-600">Bi-weekly progress documentation, 3D modeling, orthomosaic deliverables</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Flight Schedule</h3>
+          <p class="text-slate-600">Bi-weekly captures since January 2026</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Deliverables</h3>
+          <p class="text-slate-600">Orthomosaics, point clouds, timeline comparisons, Procore-compatible files</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Twenty20 Script -->
+  <script is:inline src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css" />
+  <script is:inline>
+    $(function(){
+      $(".twenty20-container").twentytwenty({
+        default_offset_pct: 0.5,
+        orientation: 'horizontal'
+      });
+    });
+  </script>
+</Layout>
