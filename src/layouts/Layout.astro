@@ -1,0 +1,78 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Construction drone services in Colorado. Progress monitoring, pre-construction documentation, and volumetric surveys that save projects money." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    
+    <!-- TwentyTwenty CSS -->
+    <link rel="stylesheet" href="/twentytwenty/css/twentytwenty.css" />
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" is:inline></script>
+    <!-- TwentyTwenty Plugin -->
+    <script src="/twentytwenty/js/jquery.event.move.js" is:inline></script>
+    <script src="/twentytwenty/js/jquery.twentytwenty.js" is:inline></script>
+  </head>
+  <body class="bg-white text-slate-900">
+    <header class="bg-slate-900 text-white">
+      <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="text-xl font-bold flex items-center gap-2">
+          <span>🐶✈️</span> Wet Dog Drones
+        </a>
+        <div class="hidden md:flex gap-6">
+          <a href="/services" class="hover:text-blue-400 transition">Services</a>
+          <a href="/case-studies" class="hover:text-blue-400 transition">Case Studies</a>
+          <a href="/about" class="hover:text-blue-400 transition">About</a>
+          <a href="/contact" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 transition">Contact</a>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <slot />
+    </main>
+    
+    <footer class="bg-slate-900 text-white mt-20">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="font-bold text-lg mb-4">Wet Dog Drones</h3>
+            <p class="text-slate-400">Construction drone services in Colorado. Part 107 certified. Decision-grade data in 24–48 hours.</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-4">Services</h3>
+            <ul class="text-slate-400 space-y-2">
+              <li><a href="/services" class="hover:text-white transition">Progress Monitoring</a></li>
+              <li><a href="/services" class="hover:text-white transition">Pre-Construction Docs</a></li>
+              <li><a href="/services" class="hover:text-white transition">Volumetric Surveys</a></li>
+              <li><a href="/services" class="hover:text-white transition">3D Modeling</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-4">Contact</h3>
+            <p class="text-slate-400">Colorado, USA</p>
+            <a href="mailto:wetdogdrones@agentmail.to" class="text-blue-400 hover:text-blue-300 transition">wetdogdrones@agentmail.to</a>
+          </div>
+        </div>
+        <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500 text-sm">
+          © 2026 Wet Dog Drones. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

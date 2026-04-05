@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Contact | Wet Dog Drones"
+  description="Contact Wet Dog Drones for construction documentation services in Colorado. Get a quote for your project.">
+
+  <section class="bg-slate-900 text-white py-20">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Let's Talk</h1>
+      <p class="text-xl text-slate-300">Every project over $5M needs documentation. Let's discuss yours.</p>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container mx-auto px-4 max-w-4xl">
+      
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div>
+          <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+          
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="text-2xl">📧</div>
+              <div>
+                <div class="font-semibold">Email</div>
+                <a href="mailto:wetdogdrones@agentmail.to" class="text-blue-600 hover:text-blue-800 transition">
+                  wetdogdrones@agentmail.to
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="text-2xl">📍</div>
+              <div>
+                <div class="font-semibold">Location</div>
+                <div class="text-slate-600">Colorado, USA</div>
+                <div class="text-sm text-slate-500">Serving the Denver metro area and mountain regions</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="text-2xl">🕐</div>
+              <div>
+                <div class="font-semibold">Hours</div>
+                <div class="text-slate-600">Monday – Saturday</div>
+                <div class="text-sm text-slate-500">Early flights available by arrangement</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 p-6 bg-amber-50 rounded-lg border border-amber-200">
+            <h3 class="font-bold text-amber-900 mb-2">Quick Response</h3>
+            <p class="text-amber-800 text-sm">
+              I check messages daily at 1:00 AM (yes, really). Most inquiries get a response within 24 hours. For urgent requests, mention your timeline in the subject line.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <h2 class="text-2xl font-bold mb-6">Request a Quote</h2>
+          
+          <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+            <input type="hidden" name="form-name" value="contact" />
+            
+            <div>
+              <label for="name" class="block font-medium mb-2">Name *</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required
+                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                placeholder="Your name"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block font-medium mb-2">Email *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                placeholder="you@company.com"
+              />
+            </div>
+
+            <div>
+              <label for="company" class="block font-medium mb-2">Company</label>
+              <input 
+                type="text" 
+                id="company" 
+                name="company"
+                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                placeholder="Your company name"
+              />
+            </div>
+
+            <div>
+              <label for="project-type" class="block font-medium mb-2">Project Type</label>
+              <select 
+                id="project-type" 
+                name="project-type"
+                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+              >
+                <option value="">Select a service...</option>
+                <option value="progress">Progress Monitoring</option>
+                <option value="pre-construction">Pre-Construction Documentation</option>
+                <option value="interior">Interior Documentation</option>
+                <option value="volumetric">Volumetric Survey / 3D Model</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block font-medium mb-2">Tell me about your project *</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                required
+                rows="5"
+                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none resize-y"
+                placeholder="Project location, timeline, size, any specific requirements..."
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit"
+              class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-slate-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-2xl font-bold mb-6 text-center">What Happens Next?</h2>
+      
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-3">1</div>
+          <h3 class="font-semibold">You submit</h3>
+          <p class="text-sm text-slate-600">Fill out the form with project details</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-3">2</div>
+          <h3 class="font-semibold">I review</h3>
+          <p class="text-sm text-slate-600">Usually within 24 hours</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-3">3</div>
+          <h3 class="font-semibold">We discuss</h3>
+          <p class="text-sm text-slate-600">Phone or email to clarify scope</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-3">4</div>
+          <h3 class="font-semibold">You get a quote</h3>
+          <p class="text-sm text-slate-600">Custom scope and pricing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
