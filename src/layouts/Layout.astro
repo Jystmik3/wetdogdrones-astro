@@ -29,8 +29,23 @@ const { title, description = "Construction drone services in Colorado. Progress 
           <img src="/wetdog-logo.png" alt="Wet Dog Drones Logo" class="h-8 w-auto object-contain max-w-[120px]" />
           <span>Wet Dog Drones</span>
         </a>
-        <div class="hidden md:flex gap-6">
+        <div class="hidden md:flex gap-6 items-center">
           <a href="/services" class="hover:text-blue-400 transition">Services</a>
+          
+          <!-- Projects Dropdown -->
+          <div class="relative group">
+            <button class="hover:text-blue-400 transition flex items-center gap-1">
+              Projects
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-slate-800 text-white shadow-lg rounded py-2 z-50">
+              <a href="/hhes" class="block px-4 py-2 hover:bg-slate-700 transition">Holly Hills (HHES)</a>
+              <a href="/dcsdes50" class="block px-4 py-2 hover:bg-slate-700 transition">Douglas County (ES50)</a>
+            </div>
+          </div>
+
           <a href="/case-studies" class="hover:text-blue-400 transition">Case Studies</a>
           <a href="/about" class="hover:text-blue-400 transition">About</a>
           <a href="/contact" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 transition">Contact</a>
