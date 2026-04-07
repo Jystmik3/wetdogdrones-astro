@@ -1,0 +1,151 @@
+# Wet Dog Drones — Full Content
+
+## Overview
+
+Wet Dog Drones provides expert construction drone services across Colorado's Front Range, Eastern Plains, and western Kansas. Founded by Michael Lilley, the company combines 12+ years of UAV experience with FAA-licensed pilots to deliver accurate, timely aerial data for construction monitoring.
+
+## Services in Detail
+
+### Drone Inspections
+We provide timely drone inspections that ensure safety compliance on construction sites. Our aerial inspections document site conditions, equipment placement, and progress without disrupting active work zones. Deliverables include high-resolution imagery and video, annotated with findings and recommendations.
+
+### Progress Monitoring
+Our drones offer schedule-driven progress tracking for construction needs. Weekly or bi-weekly flights capture consistent aerial orthomosaics that enable timeline comparisons. Progress monitoring helps identify schedule drift, validate contractor billing, and provide stakeholders with visual project updates. Deliverables include georeferenced orthomosaics, timeline comparison reports, and progress percentage calculations.
+
+### 3D Mapping
+Utilize high-accuracy mapping for precise project planning and execution. Our photogrammetry processing generates 3D point clouds, digital elevation models (DEMs), and textured mesh models. These outputs integrate directly with BIM workflows, enabling clash detection, quantity takeoffs, and design validation. Typical accuracy: 1-3cm ground sampling distance depending on flight parameters.
+
+### Volume Calculations
+Get decision-grade accuracy for as-builts and volume assessments. Volumetric surveys calculate cut/fill quantities, stockpile volumes, and borrow pit measurements. Accuracy suitable for contractor billing and earthwork payment validation. One client saved $480,000 through accurate volumetric surveying that prevented material over-ordering.
+
+### Clash Detection
+Minimize delays with effective clash detection through drone technology. By comparing current site conditions against design models (BIM/CAD), we identify potential conflicts between existing conditions and planned construction. Weekly aerial captures enable early identification of issues before they become expensive problems.
+
+### Data Integration
+We format files for BIM, CAD, Procore, and Autodesk for easy access. Deliverables include:
+- Orthomosaics: GeoTIFF, KMZ, Web tiles
+- Point Clouds: LAS, LAZ, PLY, E57
+- 3D Models: OBJ, FBX, DXF
+- CAD/BIM: Compatible with AutoCAD, Revit, Civil 3D, SketchUp
+- Project Management: Direct upload to Procore, Autodesk Construction Cloud
+
+## Service Area
+
+### Colorado Front Range
+Denver metro, Fort Collins, Boulder, Colorado Springs, and surrounding areas. Primary service region with fastest response times.
+
+### Eastern Plains
+Pueblo eastward through Limon, Sterling, and Kansas border regions. Available for infrastructure and agricultural construction projects.
+
+### Western Kansas
+Goodland, Colby, and northwest Kansas border regions. Travel arrangements required; typically combined with Front Range projects.
+
+## Company Background
+
+**Founded:** 2014 (12 years in UAV space)
+**Owner/Chief Pilot:** Michael Lilley
+**Team Member:** Molle (VO/Service Dog)
+
+Wet Dog Drones started with a focus on bringing commercial-grade drone technology to Colorado construction. What began as aerial photography has evolved into comprehensive construction intelligence services. The company maintains FAA Part 107 compliance on all operations and carries appropriate insurance for commercial construction sites.
+
+## Technology Stack
+
+- **Aircraft:** DJI enterprise drones with RTK capability
+- **Sensors:** High-resolution RGB, multispectral options available
+- **Processing:** Photogrammetry software for 3D reconstruction
+- **Accuracy:** RTK/PPK corrections for survey-grade outputs when required
+- **Delivery:** Cloud-based file sharing, direct Procore integration
+
+## Key Metrics
+
+| Metric | Value | Context |
+|--------|-------|---------|
+| Industry Experience | 12 years | Since 2014 |
+| Flights Completed | 1,000+ | Cumulative total |
+| Client Savings | $480,000 | Largest single-project value identified |
+| Standard Turnaround | 24-48 hours | From flight to delivered data |
+| Projects Completed | 50+ | Since company founding |
+| Drone Deployments | 150+ | Cumulative fleet usage |
+
+## Target Clients
+
+**Primary:** Commercial general contractors with annual volumes of $100M to $300M
+**Industries:**
+- Commercial construction (office, retail, industrial)
+- Earthwork and civil infrastructure
+- Transportation projects
+- Renewable energy construction
+
+**Project Types:**
+- Multi-story commercial buildings
+- Site development and grading
+- Infrastructure and utilities
+- Solar/wind farm construction
+
+## Competitive Advantages
+
+1. **Customer-Centric Approach** — We work around your schedule and adapt to site conditions. Weekend flights, early mornings, and rapid mobilization available.
+
+2. **Reliable Data** — High-resolution orthomosaics, 3D models, and volumetric surveys delivered in 24-48 hours. Consistent quality across all deliverables.
+
+3. **Sustainable Practices** — Drone surveys reduce vehicle traffic on-site and minimize environmental impact compared to traditional survey methods.
+
+4. **Construction-Specific Expertise** — Not just drone pilots; we understand construction workflows, schedules, and data needs. We speak the language of contractors, project managers, and estimators.
+
+## Frequently Asked Questions
+
+**Q: How much does drone construction monitoring cost?**
+A: Pricing depends on project size, frequency of flights, and deliverable requirements. Contact us for a custom quote based on your specific needs.
+
+**Q: How accurate are drone volumetric surveys?**
+A: With proper ground control and flight parameters, drone volumetric surveys achieve decision-grade accuracy suitable for earthwork billing and cut/fill calculations. Accuracy typically within 2-5% of traditional survey methods at significantly lower cost and faster turnaround.
+
+**Q: What deliverables do construction drone services provide?**
+A: Standard deliverables include high-resolution orthomosaics (georeferenced aerial imagery), 3D point clouds, digital elevation models, volumetric calculations, timeline comparison reports, and video documentation. All files formatted for your BIM/CAD/project management workflows.
+
+**Q: How quickly can drone survey results be delivered?**
+A: Standard turnaround is 24-48 hours from flight to delivered data. Rush service available for time-critical needs. Raw imagery available same-day in emergency situations.
+
+**Q: Are your drone pilots FAA licensed?**
+A: Yes, all Wet Dog Drones pilots hold current FAA Part 107 Remote Pilot Certificates. We maintain flight logs, aircraft maintenance records, and insurance required for commercial construction sites.
+
+**Q: Do I need FAA approval for construction drone flights?**
+A: No — Wet Dog Drones handles all FAA compliance including airspace authorizations, NOTAMs when required, and coordination with control towers. You don't need to do anything.
+
+**Q: What areas do you serve?**
+A: Colorado Front Range (Denver, Fort Collins, Boulder, Colorado Springs), Eastern Plains, and western Kansas. Travel available for regional projects.
+
+**Q: Can drones fly in controlled airspace near airports?**
+A: Yes, with proper FAA authorizations. Wet Dog Drones obtains LAANC approvals and Part 107 waivers as needed for controlled airspace operations.
+
+**Q: How does drone progress monitoring compare to traditional methods?**
+A: Drone progress monitoring captures the entire site in a single flight, providing consistent, repeatable data weekly. Compared to manual photography or ground surveys, drones offer faster capture, better coverage, and enable 3D comparison over time.
+
+**Q: What is an orthomosaic?**
+A: An orthomosaic is a georeferenced aerial photograph composed of multiple overlapping drone images stitched together and corrected for terrain and camera distortion. It functions like a map — measurements are accurate across the entire image.
+
+**Q: Can you integrate with our existing project management software?**
+A: Yes. We routinely deliver files formatted for Procore, Autodesk Construction Cloud, BIM 360, and other platforms. Direct upload capabilities available.
+
+**Q: What happens if weather prevents flying?**
+A: We monitor forecasts and coordinate with your schedule to reschedule if needed. Light rain and wind can often be worked around; safety is the priority.
+
+## Contact Information
+
+**Website:** https://wetdogdrones.net
+**Service Area:** Colorado Front Range, Eastern Plains, Western Kansas
+**Response Time:** Typically same-day inquiry response
+
+## Sitemap
+
+- / — Homepage
+- /about/ — Company background, team bios
+- /services/ — Detailed service descriptions
+- /projects/ — Portfolio and case studies
+- /our-mission/ — Company values and approach
+- /gallery/ — Project imagery
+- /contact/ — Inquiry form and contact details
+
+## Keywords and Topics
+
+Construction drone services, aerial site monitoring, progress tracking, volumetric surveys, 3D mapping, orthomosaics, point clouds, BIM integration, FAA licensed drone pilots, Colorado drone services, Front Range construction, earthwork monitoring, cut/fill calculations, clash detection, Procore integration, construction technology.

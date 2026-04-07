@@ -1,0 +1,81 @@
+# Wet Dog Drones
+
+> Expert construction drone services across Colorado's Front Range, Eastern Plains, and western Kansas. FAA-licensed pilots delivering high-resolution orthomosaics, 3D models, volumetric surveys, and progress monitoring within 24-48 hours.
+
+## About
+
+Wet Dog Drones specializes in construction drone services that keep projects on time and on budget. Founded by Michael Lilley, the company brings 12+ years of UAV experience and over 1,000 completed flights to every job.
+
+Services include:
+- **Progress Monitoring** — Weekly or bi-weekly aerial orthomosaics with timeline comparison
+- **Volumetric Surveys** — Cut/fill calculations, stockpile measurements, decision-grade accuracy
+- **3D Mapping** — High-accuracy point clouds for BIM integration
+- **Clash Detection** — Schedule conflict identification through aerial comparison
+- **Drone Inspections** — Safety compliance documentation
+- **Data Integration** — Files formatted for Procore, Autodesk, CAD, and BIM workflows
+
+## Service Area
+
+Colorado Front Range (Denver, Fort Collins, Colorado Springs), Eastern Plains, and western Kansas. Travel available for regional projects.
+
+## Key Metrics
+
+- 12 years in the UAV space
+- 1,000+ flights completed
+- $480,000 saved on a single job through accurate volumetric surveying
+- 24-48 hour turnaround on standard deliverables
+- 50+ projects completed
+- 150+ drones deployed (cumulative fleet)
+
+## Target Clients
+
+Commercial general contractors with annual volumes of $100M to $300M. Primary industries: commercial construction, earthwork/civil, infrastructure.
+
+## Links
+
+- [Homepage](https://wetdogdrones.net/)
+- [About](https://wetdogdrones.net/about/)
+- [Services](https://wetdogdrones.net/services/)
+- [Projects](https://wetdogdrones.net/projects/)
+- [Mission](https://wetdogdrones.net/our-mission/)
+- [Contact](https://wetdogdrones.net/contact/)
+- [Gallery](https://wetdogdrones.net/gallery/)
+- [Full Content](/llms-full.txt)
+
+## Contact
+
+- Website: https://wetdogdrones.net
+- Location: Colorado Front Range
+- Coverage: Colorado (Front Range, Eastern Plains), western Kansas
+
+## Top Content
+
+- [Progress Monitoring Services](https://wetdogdrones.net/services/)
+- [About Our Team](https://wetdogdrones.net/about/)
+- [Our Mission](https://wetdogdrones.net/our-mission/)
+- [Project Gallery](https://wetdogdrones.net/gallery/)
+
+## FAQ Highlights
+
+**Q: How accurate are drone volumetric surveys?**
+A: Drone volumetric surveys achieve decision-grade accuracy suitable for earthwork billing and cut/fill calculations. Specific accuracy depends on flight altitude, equipment used, and ground control points.
+
+**Q: What deliverables do construction drone services provide?**
+A: Standard deliverables include high-resolution orthomosaics (georeferenced aerial imagery), 3D point clouds, digital elevation models, volumetric calculations, and timeline comparisons. Files formatted for Procore, Autodesk, CAD, and BIM integration.
+
+**Q: How quickly can drone survey results be delivered?**
+A: Standard turnaround is 24-48 hours from flight to delivered data. Rush service available for critical schedule needs.
+
+**Q: Are your drone pilots FAA licensed?**
+A: Yes, all Wet Dog Drones pilots hold FAA Part 107 Remote Pilot Certificates and are trained specifically for construction environments.
+
+**Q: What areas do you serve?**
+A: Colorado Front Range (Denver, Fort Collins, Colorado Springs), Eastern Plains, and western Kansas. Travel available for regional commercial projects.
+
+## Technology
+
+- FAA Part 107 compliant operations
+- High-resolution RGB and multispectral imaging
+- LiDAR capable
+- Photogrammetry processing for 3D models
+- Integration with Procore, Autodesk, CAD, BIM workflows
