@@ -60,16 +60,20 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Twenty20 Script -->
+  <!-- Twenty20 Assets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css" />
   <script is:inline src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css" />
   <script is:inline>
-    $(function(){
-      $(".twenty20-container").twentytwenty({
-        default_offset_pct: 0.5,
-        orientation: 'horizontal'
-      });
-    });
+    function initTwenty20() {
+      if (window.jQuery && $.fn.twentytwenty) {
+        $(".twenty20-container").twentytwenty({
+          default_offset_pct: 0.5,
+          orientation: 'horizontal'
+        });
+      }
+    }
+    document.addEventListener('DOMContentLoaded', initTwenty20);
+    window.addEventListener('load', initTwenty20);
   </script>
 </Layout>
