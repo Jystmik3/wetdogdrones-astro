@@ -19,6 +19,40 @@ const { title, description = "Construction drone services in Colorado. Progress 
     <meta name="description" content={description} />
     <title>{title}</title>
     
+    <!-- Local Business Schema -->
+    <script is:inline type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Wet Dog Drones",
+      "image": "https://wetdogdrones.net/images/hhes-hero.jpg",
+      "description": "Expert construction drone services in Colorado. Progress monitoring, volumetric surveys, and 3D mapping for $100M+ projects.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Denver",
+        "addressRegion": "CO",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.7392", 
+        "longitude": "-104.9902"
+      },
+      "url": "https://wetdogdrones.net",
+      "telephone": "",
+      "email": "wetdogdrones@agentmail.to",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "39.7392",
+          "longitude": "-104.9902"
+        },
+        "radius": "200000"
+      }
+    }
+    </script>
+    
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" is:inline></script>
   </head>
