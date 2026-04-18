@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Flying Under a Canopy: What I Learned Manual-Flying 9,000 Sq Ft of Decking | Wet Dog Drones" description="A pre-pour flight under a canopy with no GPS, 25mph gusts, and 6.5 feet of clearance forced me to relearn everything I thought I knew about drone data processing.">
+
+  <!-- Article Hero -->
+  <section class="bg-slate-900 text-white py-16">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <a href="/blog" class="text-blue-400 hover:text-blue-300 transition text-sm mb-4 inline-block">← Back to Blog</a>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Flying Under a Canopy</h1>
+      <p class="text-xl text-slate-300 mb-6">What I Learned Manual-Flying 9,000 Sq Ft of Decking</p>
+      <div class="flex items-center gap-4 text-slate-400 text-sm">
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium text-xs">Field Stories</span>
+        <span>Michael Lilley</span>
+        <span>•</span>
+        <time datetime="2026-04-18">April 2026</time>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <article class="py-16">
+    <div class="container mx-auto px-4 max-w-3xl prose prose-lg prose-slate">
+
+      <p class="text-lg text-slate-600 leading-relaxed">
+        Tuesday morning I get a text: <em>"Hey, we're pouring concrete tomorrow. Can you come do this?"</em>
+      </p>
+
+      <p>
+        Normally that's a scheduled flight. This wasn't. This was "Hey, we need stub-outs and protrusions verified on a deck that's about to get concrete poured on it, and we need it yesterday." I told Chris — my super — I'd give him one of these a month, as long as we don't abuse it. He called in the favor.
+      </p>
+
+      <p>
+        So I show up at Holly Hills and there's the deck. 9,189 square feet of it. Under a canopy. With columns, cables, braces, and cherry pickers scattered everywhere. The wind's gusting to 25, sustained at 10-15. And I need to fly this thing at 6.5 to 6.9 feet off the deck because I need to see every hole, every drain, every stub-out.
+      </p>
+
+      <h2>On the Sticks the Entire Time</h2>
+
+      <p>
+        There's no automated flight path for this. No waypoints. No "launch and let it do its thing." This is me on the sticks the whole way, flying a grid pattern between columns, under a roof, with no GPS signal worth a damn because I'm under a metal canopy. The 4E drone burned through two batteries for 9,000 square feet. That's how hard this flight was.
+      </p>
+
+      <p>
+        In hindsight, I should have flown it north-south. But that would've put me in a crosswind the entire flight. I was already dealing with enough, so I flew into the wind and with a tailwind instead. Made it interesting. That's one of those things you learn in the moment — sometimes the textbook answer doesn't work because the field conditions say otherwise.
+      </p>
+
+      <p>
+        And yeah, before you ask: the image data came out fine. No blur even with the wind. That surprised me too. The 4E handles it.
+      </p>
+
+      <h2>And Then the Real Problems Started</h2>
+
+      <p>
+        Flying under a canopy means no RTK. No GNSS. Which means when I brought the data back to process, it was a disaster. The model was registering off the coast of Sweden and Denmark — literally. No geolocation data at all.
+      </p>
+
+      <p>
+        The Pix4D calibration failed. Hard. So I had to strip every bit of geolocation data out of the exit file — latitude, longitude, northing, easting, X, Y, Z coordinates — and re-import the images raw. Then I manually added tie points (MTPs) to calibrate the model. That's basically doing Ground Control Points by hand, without ground control, by finding the center of recognizable objects in multiple images and locking them together.
+      </p>
+
+      <p>
+        There was a two-foot drop along a beam in the initial pass. The tie points fixed it, but I was fighting this data from 11 AM until 7:30 PM the next day. Missed my deadline. Texted Chris at 6:30 in the morning: "Hey, give me a call." Never heard back. Which is typical, and honestly? I didn't feel great about missing it, but I also didn't feel that bad because it was a freebie — there was no charge involved. But I still lost a day of my life to it.
+      </p>
+
+      <h2>The Software Bill Is Real</h2>
+
+      <p>
+        People ask me about software. My full stack runs about $22,000 without educational discounts. Pix4D just jacked their prices. I'm too deep in that ecosystem to switch, and I've tried WebODM — it's fine, it's just not what I'm used to. Cloud Compare is the exception. Free, powerful, and I use it constantly for cleaning point clouds and merging data sets. If you're starting out, learn Cloud Compare first.
+      </p>
+
+      <h2>What I Charged vs. What It Was Worth</h2>
+
+      <p>
+        Here's the honest truth: I don't charge enough for that kind of flight. That 9,000 square feet of manual, under-canopy, no-GPS, wind-in-your-face flying was some of the most stressful work I've done with a drone. And the post-processing was a nightmare. I spent more time stitching and calibrating than I did flying the site.
+      </p>
+
+      <p>
+        So yeah. Lesson learned. Again. The same lesson I keep learning: some flights cost more than you're charging. If you're flying manually under a canopy with no GPS, you should be charging a premium. Period. The metadata doesn't lie.
+      </p>
+
+      <p>
+        That's the real point here. The metadata is the whole point. The ortho came out clean. The point cloud came out usable. The deliverable was solid. But nobody sees the 16 hours of work it took to get from "raw images with no geolocation" to "here's your pre-pour documentation." That's the job. That's what you're paying for — not the flight, the proof.
+      </p>
+
+      <div class="mt-12 pt-8 border-t border-slate-200 not-prose">
+        <p class="text-slate-500 text-sm mb-4">Written by Michael Lilley, founder of Wet Dog Drones. 12 years in drones, 5 years commercially licensed. FAA Part 107 certified.</p>
+        <a href="/contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition inline-block">Need Pre-Pour Documentation? Let's Talk.</a>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
