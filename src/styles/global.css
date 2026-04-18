@@ -38,6 +38,11 @@ select:focus-visible {
   outline-offset: 2px;
 }
 
+/* Blog prose — more breathing room between paragraphs */
+.prose p {
+  margin-bottom: 1.5em;
+}
+
 /* Image optimization */
 img {
   max-width: 100%;
