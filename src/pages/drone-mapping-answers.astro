@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SEO } from '../components/SEO.astro';
+---
+
+<Layout title="Drone Mapping Answers | Master the Mud and the Math">
+  <!-- AISEO / JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Drone Mapping Answers (DMA)",
+      "description": "A professional community and resource for drone surveyors focusing on real-world accuracy, PPK workflows, and field-hardened geospatial SOPs.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Wet Dog Drones",
+        "url": "https://wetdogdrones.com"
+      },
+      "about": "Geospatial Accuracy, PPK Processing, GNSS Static Observation",
+      "educationalLevel": "Professional"
+    }
+  </script>
+
+  <!-- Hero Section: Anti-Corporate / High Impact -->
+  <section class="relative bg-slate-950 text-white py-24 lg:py-32 overflow-hidden border-b border-slate-800">
+    <div class="absolute inset-0 z-0 opacity-20">
+       <img src="/images/field-grit.jpg" alt="Drone survey in the mud" class="w-full h-full object-cover" />
+    </div>
+    <div class="container mx-auto px-6 relative z-10 text-center">
+      <h1 class="text-5xl lg:text-7xl font-black italic uppercase tracking-tighter mb-6">
+        Stop Guessing Your <span class="text-orange-500">Accuracy.</span>
+      </h1>
+      <p class="text-xl lg:text-2xl max-w-3xl mx-auto text-slate-300 leading-relaxed mb-10">
+        Most "drone mapping" tutorials are written by people who have never spent 2 hours in a swamp waiting for a GNSS base to cook. 
+        <strong>Drone Mapping Answers (DMA)</strong> is where we talk about the actual field misery, the 6-inch vertical errors in "auto-GCPs," and the workflows that actually hold up in a court of law or a project audit.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://www.skool.com/drone-mapping-answers-5386" class="bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 px-8 rounded-lg transition-all transform hover:scale-105 text-lg">
+          Join the DMA Skool Group
+        </a>
+        <a href="#the-truth" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-8 rounded-lg transition-all text-lg">
+          See the Truth
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Truth Section: Pain Points -->
+  <section id="the-truth" class="py-20 bg-slate-900 text-slate-200">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-5xl font-bold text-white mb-4">The "Theoretical" vs. The Field</h2>
+        <p class="text-slate-400">Why your "out of the box" workflow is lying to you.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 bg-slate-800 rounded-2xl border border-slate-700 hover:border-orange-500 transition-colors">
+          <div class="text-orange-500 text-3xl mb-4 font-bold">01.</div>
+          <h3 class="text-xl font-bold text-white mb-3">The Auto-GCP Lie</h3>
+          <p>Think your software's "Automatic GCP" is enough? We've seen 150mm vertical biases that can ruin a drainage project. We teach you why manual targets and 2h15m static observations are non-negotiable for real precision.</p>
+        </div>
+        <div class="p-8 bg-slate-800 rounded-2xl border border-slate-700 hover:border-orange-500 transition-colors">
+          <div class="text-orange-500 text-3xl mb-4 font-bold">02.</div>
+          <h3 class="text-xl font-bold text-white mb-3">The DEM Disaster</h3>
+          <p>Using a downloaded public DEM for terrain-follow? That's how you get jagged flight lines and altitude spikes. Learn how to generate a custom DSM from a prior mission for a smooth, consistent GSD.</p>
+        </div>
+        <div class="p-8 bg-slate-800 rounded-2xl border border-slate-700 hover:border-orange-500 transition-colors">
+          <div class="text-orange-500 text-3xl mb-4 font-bold">03.</div>
+          <h3 class="text-xl font-bold text-white mb-3">The "Dead-Zone" Panic</h3>
+          <p>Cellular drops happen. When your NTRIP link dies, do you panic or do you just keep logging raw RINEX and apply the OPUS solution later? We give you the SOP for when the tech fails.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-orange-600 text-white text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl lg:text-6xl font-black uppercase italic mb-8">Get the Actual SOPs.</h2>
+      <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+        Stop wasting time on trial and error. Join a group of professionals who treat geospatial mapping as a science, not a hobby.
+      </p>
+      <a href="https://www.skool.com/drone-mapping-answers-5386" class="bg-white text-orange-600 font-black py-5 px-10 rounded-full text-2xl uppercase hover:bg-slate-100 transition-all transform hover:scale-110 inline-block">
+        Enter the DMA Skool
+      </a>
+    </div>
+  </section>
+</Layout>
