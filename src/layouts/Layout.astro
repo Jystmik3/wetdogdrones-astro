@@ -1,4 +1,4 @@
----
+--- 
 import '../styles/global.css';
 
 interface Props {
@@ -30,36 +30,36 @@ const { title, description = "Construction drone services in Colorado. Progress 
     
     <!-- Local Business Schema -->
     <script is:inline type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Wet Dog Drones",
-      "image": "https://wetdogdrones.net/images/hhes-hero.jpg",
-      "description": "Expert construction drone services in Colorado. Progress monitoring, volumetric analysis, and 3D mapping for $100M+ projects.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Denver",
-        "addressRegion": "CO",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "39.7392", 
-        "longitude": "-104.9902"
-      },
-      "url": "https://wetdogdrones.net",
-      "telephone": "",
-      "email": "wetdogdrones@agentmail.to",
-      "serviceArea": {
-        "@type": "GeoCircle",
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Wet Dog Drones",
+        "image": "https://wetdogdrones.net/images/hhes-hero.jpg",
+        "description": "Expert construction drone services in Colorado. Progress monitoring, volumetric analysis, and 3D mapping for $100M+ projects.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Denver",
+          "addressRegion": "CO",
+          "addressCountry": "US"
+        },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "39.7392",
+          "latitude": "39.7392", 
           "longitude": "-104.9902"
         },
-        "radius": "200000"
+        "url": "https://wetdogdrones.net",
+        "telephone": "",
+        "email": "info@wetdogdrones.com",
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "39.7392",
+            "longitude": "-104.9902"
+          },
+          "radius": "200000"
+        }
       }
-    }
     </script>
     
     <!-- jQuery -->
@@ -87,12 +87,12 @@ const { title, description = "Construction drone services in Colorado. Progress 
           <div class="relative group">
             <button class="hover:text-blue-400 transition flex items-center gap-1">
               Projects
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform" id="mobile-projects-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-slate-800 text-white shadow-lg rounded py-2 z-50">
-              <a href="https://wetdogdrones.net/rhsp" class="block px-4 py-2 hover:bg-slate-700 transition">Ruby Hill Park (RHSP)</a>
+              <a href="https://wetdogdrones.net/rhsp" class="block px-4 py-2 hover:bg-slate-700 transition">Ruby Hill Sport (RHSP)</a>
               <a href="https://wetdogdrones.net/hhes" class="block px-4 py-2 hover:bg-slate-700 transition">Holly Hills (HHES)</a>
               <a href="https://wetdogdrones.net/dcsdes50" class="block px-4 py-2 hover:bg-slate-700 transition">Douglas County (ES50)</a>
             </div>
@@ -109,14 +109,14 @@ const { title, description = "Construction drone services in Colorado. Progress 
       <div id="mobile-menu" class="hidden md:hidden bg-slate-800 px-4 pb-4">
         <a href="/services" class="block py-2 hover:text-blue-400 transition">Services</a>
         <div>
-          <button id="mobile-projects-btn" class="w-full text-left py-2 hover:text-blue-400 transition flex items-center justify-between">
+          <button id="mobile-projects-btn" class="w-full text-left py-2 hover:text-blue-400 transition flex justify-between items-center">
             Projects
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform" id="mobile-projects-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div id="mobile-projects-sub" class="hidden pl-4">
-            <a href="https://wetdogdrones.net/rhsp" class="block py-2 hover:text-blue-400 transition">Ruby Hill Park (RHSP)</a>
+            <a href="https://wetdogdrones.net/rhsp" class="block py-2 hover:text-blue-400 transition">Ruby Hill Sport (RHSP)</a>
             <a href="https://wetdogdrones.net/hhes" class="block py-2 hover:text-blue-400 transition">Holly Hills (HHES)</a>
             <a href="https://wetdogdrones.net/dcsdes50" class="block py-2 hover:text-blue-400 transition">Douglas County (ES50)</a>
           </div>
@@ -124,10 +124,10 @@ const { title, description = "Construction drone services in Colorado. Progress 
         <a href="/case-studies" class="block py-2 hover:text-blue-400 transition">Case Studies</a>
         <a href="/blog" class="block py-2 hover:text-blue-400 transition">Blog</a>
         <a href="/about" class="block py-2 hover:text-blue-400 transition">About</a>
-        <a href="/contact" class="block py-2 mt-2 text-center bg-blue-600 px-4 rounded hover:bg-blue-700 transition">Contact</a>
+        <a href="/contact" class="block mt-2 text-center bg-blue-600 py-2 rounded hover:bg-blue-700 transition">Contact</a>
       </div>
     </header>
-    
+
     <main>
       <slot />
     </main>
@@ -151,7 +151,9 @@ const { title, description = "Construction drone services in Colorado. Progress 
           <div>
             <h3 class="font-bold text-lg mb-4">Contact</h3>
             <p class="text-slate-400">Colorado, USA</p>
-            <a href="mailto:wetdogdrones@agentmail.to" class="text-blue-400 hover:text-blue-300 transition">wetdogdrones@agentmail.to</a>
+            <a href="mailto:info@wetdogdrones.com" class="text-blue-400 hover:text-blue-300 transition">
+              info@wetdogdrones.com
+            </a>
           </div>
         </div>
         <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500 text-sm">
@@ -172,7 +174,7 @@ const { title, description = "Construction drone services in Colorado. Progress 
 
       projectsBtn?.addEventListener('click', () => {
         projectsSub.classList.toggle('hidden');
-        projectsArrow?.classList.toggle('rotate-180');
+        projectsArrow.classList.toggle('rotate-180');
       });
     </script>
   </body>
