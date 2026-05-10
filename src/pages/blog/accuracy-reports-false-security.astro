@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="The 'Green Icon' Lie: Why Your Accuracy Reports are Trash | Wet Dog Drones"
+  description="Relying on software accuracy reports is a false security. Learn the pro-grade workflow for manual verification in QGIS to protect your project's bottom line.">
+
+  <!-- Article Hero -->
+  <section class="bg-slate-900 text-white py-16">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <a href="/blog" class="text-blue-400 hover:text-blue-300 transition text-sm mb-4 inline-block">← Back to Blog</a>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">The "Green Icon" Lie</h1>
+      <p class="text-xl text-slate-300 mb-6">Why Your Accuracy Reports are Trash</p>
+      <div class="flex items-center gap-4 text-slate-400 text-sm">
+        <span>Michael Lilley</span>
+        <span>•</span>
+        <span>May 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <article class="py-16">
+    <div class="container mx-auto px-4 max-w-3xl prose prose-lg prose-slate">
+
+      <p class="text-lg text-slate-600 leading-relaxed">
+        So, here’s the thing. We’ve all seen those fancy PDF accuracy reports that Pix4D or DJI Terra spit out after a processing run. You know the ones—covered in green "Pass" icons and low RMS errors that make you feel like a mapping god.
+      </p>
+
+      <p class="text-lg text-slate-600 leading-relaxed">
+        Here’s a reality check: Relying on those reports alone is what I call "the false security of the software bubble." If you're trusting a software package to grade its own homework, you aren't doing professional mapping—you're just playing with voodoo blackmagic bullshit.
+      </p>
+
+      <p>
+        Those "Pass" icons? They’re voodoo. They’re just internal math indicators telling you the software <em>thinks</em> it did a good job based on its own recursive algorithms. It’s like asking a car manufacturer if their car is 100% safe. Of course they’re going to say yes. But until you crash that thing into a wall, you don’t actually know.
+      </p>
+
+      <p>
+        In the mapping world, that "wall" is ground truth.
+      </p>
+
+      <p>
+        If you want to maintain your integrity and actually know that your ortho is solid, you’ve got to get out of the processing software and into a third-party environment like QGIS or ArcGIS. I mean, I love Pix4D Mapper, but I don't let it tell me if I'm accurate. I tell <em>it</em>.
+      </p>
+
+      <div class="bg-slate-50 border-l-4 border-slate-400 p-6 my-8 not-prose">
+        <p class="text-slate-700 italic">"Stop hiding behind the green checkmarks. If you can't verify it independently, you don't own it."</p>
+      </div>
+
+      <h2>The Pro-Grade Workflow</h2>
+
+      <ol>
+        <li><strong>Export your GeoTIFF.</strong></li>
+        <li><strong>Open it in QGIS.</strong> Be sure to set your coordinate system (EPSG 6626 for my Utah brothers).</li>
+        <li><strong>Drop in your GCP file.</strong> This should contain your GCP/Checkpoints as a separate layer.</li>
+        <li><strong>Use the measure tool.</strong> Check the distance between your marked point on the ortho and the actual surveyed coordinate.</li>
+      </ol>
+
+      <p>
+        This is where the rubber meets the road. When you see a discrepancy of 0.10 feet in QGIS, that’s information you can take to the bank. It’s real. It’s independent. It’s the difference between a "pretty map" and data that saves a superintendent $100,000 in mistakes.
+      </p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-6 my-8 not-prose">
+        <p class="font-bold text-amber-900 text-lg mb-2">Pro Tip</p>
+        <p class="text-amber-800">Never let the software grade its own homework. Manual verification is the only way to protect your bottom line money.</p>
+      </div>
+
+      <p>
+        Follow Rule 2. Ground truth is everything.
+      </p>
+
+      <p>
+        Thumbs up, buttercup. Let’s get it right.
+      </p>
+
+      
+      <a href="https://www.skool.com/drone-mapping-answers-5386" class="block bg-slate-900 text-white hover:bg-slate-800 transition p-8 my-12 rounded-xl not-prose no-underline">
+        <p class="text-lg text-slate-300 mb-3 font-semibold">New Part 107 pilot?</p>
+        <p class="text-slate-200 leading-relaxed">Your Part 107 taught you how to fly legally. It didn't teach you how to make money, how to process data, or what to do when Pix4D won't calibrate and you're staring at a deadline at 7:00 in the morning. DMA is a room full of people who've already been where you are — and they meet every week to answer exactly those questions. No theory. No "buy my course." Just operators solving real problems from real job sites, live, every Thursday morning.</p>
+        <p class="text-blue-400 font-semibold mt-4">Join Drone Mapping Answers →</p>
+      </a>
+
+      <div class="mt-12 pt-8 border-t border-slate-200 not-prose">
+        <p class="text-slate-500 text-sm mb-4">Written by Michael Lilley, founder of Wet Dog Drones. 12 years in drones, 7 years commercially licensed. FAA Part 107 certified. Based in Colorado.</p>
+        <a href="/contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition inline-block">Let's Talk About Your Project</a>
+      </div>
+
+
+    </div>
+  </article>
+
+</Layout>
