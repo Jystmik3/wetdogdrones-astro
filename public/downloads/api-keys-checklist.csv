@@ -1,0 +1,5 @@
+Service,What You Need,Link,Your Key / Token
+OpenRouter,API key (free tier works),https://openrouter.ai,
+Ollama Cloud,API key (paid ~$20/mo - optional alternative to OpenRouter),https://ollama.com,
+Telegram,Bot token (via @BotFather),https://t.me/BotFather,
+Composio,Account (optional - connects Gmail GitHub Reddit etc),https://composio.dev,
