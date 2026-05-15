@@ -1,0 +1,533 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="We Installed an AI Agent. Here's What Actually Happened. | Wet Dog Drones"
+  description="The real story of going from zero to a full AI agent setup. 14 broken installs, a clean wipe, a multi-agent content pipeline, and the honest truth about what it's actually like. By Michael Lilley.">
+
+  <!-- Hero Section -->
+  <section class="relative bg-slate-950 text-white py-24 lg:py-32 overflow-hidden border-b border-slate-800">
+    <div class="absolute inset-0 z-0 opacity-10">
+      <div class="w-full h-full bg-gradient-to-br from-orange-600 to-slate-900"></div>
+    </div>
+    <div class="absolute inset-0 z-0 opacity-50">
+      <img src="/images/aiagent/hero.png" alt="ChatGPT's AI-generated vision of Michael Lilley: a surveyor with drone and tablet, accompanied by his service dog Molle in tactical gear, on a construction site with mountains in the background" class="w-full h-full object-cover" />
+    </div>
+    <div class="container mx-auto px-6 relative z-10 text-center">
+      <p class="text-orange-500 font-bold uppercase tracking-widest mb-4 text-sm">The Honest Story</p>
+      <h1 class="text-4xl lg:text-6xl xl:text-7xl font-black italic uppercase tracking-tighter mb-6">
+        We Installed an <span class="text-orange-500">AI Agent.</span>
+      </h1>
+      <h2 class="text-2xl lg:text-3xl font-bold text-slate-300 mb-6">
+        Here's What Actually Happened.
+      </h2>
+      <p class="text-lg lg:text-xl max-w-3xl mx-auto text-slate-400 leading-relaxed mb-10">
+        Not the demo. Not the YouTube tutorial. The real story — 4 OpenClaw installs, 10 Hermes iterations, a clean wipe, a multi-agent content pipeline, and the honest truth about what it's actually like to run an AI agent day to day.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#the-beginning" class="bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 px-8 rounded-lg transition-all transform hover:scale-105 text-lg">
+          Start From the Beginning
+        </a>
+        <a href="/aiagent/walkthrough" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-8 rounded-lg transition-all text-lg">
+          Skip to the Install Guide
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats Bar -->
+  <section class="bg-slate-900 border-b border-slate-800 py-8">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-3xl font-black text-orange-500">14</div>
+          <div class="text-slate-400 text-sm">Total Agent Iterations</div>
+        </div>
+        <div>
+          <div class="text-3xl font-black text-orange-500">3</div>
+          <div class="text-slate-400 text-sm">Agents Running Right Now</div>
+        </div>
+        <div>
+          <div class="text-3xl font-black text-orange-500">1,611</div>
+          <div class="text-slate-400 text-sm">Knowledge Nuggets Extracted</div>
+        </div>
+        <div>
+          <div class="text-3xl font-black text-orange-500">4</div>
+          <div class="text-slate-400 text-sm">Blog Drafts Written by Agents</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Before Hermes — The OpenClaw Era -->
+  <section id="the-beginning" class="py-20 bg-slate-900 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="text-orange-500 text-4xl font-black">01</div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">Before Hermes — The OpenClaw Era</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        So it's early February, 2026. I've been hearing about AI agents for months. Everyone's talking. Nobody's doing. I decide to actually <em>do</em>.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        I install <a href="https://openclaw.ai" class="text-orange-400 hover:text-orange-300 underline" target="_blank" rel="noopener noreferrer">OpenClaw</a>. First agent. Fresh out of the box.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        And it's... fine. The dashboard looks incredible. They call it Mission Control. You've got your agent status, your tool connections, your session logs — all in one place. It looks like the bridge of a starship.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Here's the problem. The agent dies. Every single time.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        No persistent memory. No skills system. No multi-platform gateway. You'd have a great conversation, close the laptop, come back the next morning, and it's like hiring a new employee every single day and having to train them from scratch.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        I went through four OpenClaw installs before I made the switch. Four. Each one a fresh hope, each one broken in a different way.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Then I found <a href="https://github.com/NousResearch/hermes-agent" class="text-orange-400 hover:text-orange-300 underline" target="_blank" rel="noopener noreferrer">Hermes</a>. And I struggled with it early on too. The memory work didn't start falling into place until agents 12 and 13. That's when I figured out the vault — <code class="bg-slate-800 px-2 py-1 rounded text-orange-300">/mnt/pc-vault/</code> — files on disk instead of a black-box database. Agent 14 was the clean install with zero baggage. Everything clicked.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Truth be told, you're talking to agent 15 right now — but I'm still on the 14th install. Things were going really well. Had a rough day — kinda like today — got frustrated and wiped all the memory and started over. But I'm a digital pack rat. I couldn't help myself. Eventually gave all the memories back.
+      </p>
+      <div class="bg-slate-800 border-l-4 border-orange-500 p-6 rounded-r-lg mb-6">
+        <p class="text-slate-300">
+          <strong class="text-white">The takeaway:</strong> A pretty dashboard means nothing if the agent can't remember what you told it five minutes ago. Looks aren't data. And memory isn't a feature — it's the whole game.
+        </p>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        OpenClaw taught me something important, though. The concept works. An agent that can use tools, connect to services, and take actions on your behalf — that's real. The execution just wasn't there yet. Not for what I needed.
+      </p>
+      <p class="text-lg text-orange-400 font-semibold">
+        Pro tip of the day: If your agent can't persist memory across sessions, you don't have an agent. You have a very expensive chatbot.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 2: The Decision to Wipe -->
+  <section class="py-20 bg-slate-950 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="text-orange-500 text-4xl font-black">02</div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">The Decision to Wipe</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        Fourteen total iterations across two frameworks. I lost count of how many hours I burned.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Here's where I landed: the memory system was the root problem. Not the model. Not the tools. Memory. Every agent framework I'd tried treated memory like an afterthought — a little text file, a SQLite database, whatever. Nothing that actually worked like a human remembering things.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        So I made a decision. I was going to abandon the built-in memory entirely.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Instead, I'd use <a href="https://obsidian.md" class="text-orange-400 hover:text-orange-300 underline" target="_blank" rel="noopener noreferrer">Obsidian</a> Sync Pro as the persistence backbone. My vault lives on my PC, mounted via SMB to my NAS at <code class="bg-slate-800 px-2 py-1 rounded text-orange-300">/mnt/pc-vault/</code>. Every file, every note, every piece of knowledge the agent needs — it all lives there. In plain markdown. Human-readable. Backed up. Synced.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        The agent doesn't "remember" things in some black-box database. It reads files. Just like you and I do.
+      </p>
+      <div class="bg-slate-800 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
+        <p class="text-slate-300">
+          <strong class="text-white">Why Obsidian?</strong> Because if you can't debug your agent's memory with a text editor, you've already lost. Obsidian Sync Pro isn't cheap. But it's the difference between an agent that remembers and an agent that forgets.
+        </p>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        This was the turning point. Not a new model. Not a new framework. A new approach to memory. Files on a disk. That's it. That's the whole insight.
+      </p>
+      <p class="text-lg text-orange-400 font-semibold">
+        Everything after this point works because of that decision.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 3: Clean Install #15 -->
+  <section class="py-20 bg-slate-900 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="text-orange-500 text-4xl font-black">03</div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">Clean Install #14 — The One That Stuck</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        Fresh server. Zero baggage. I run the install script:
+      </p>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash</code>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        Fourteenth time's the charm. <a href="https://github.com/NousResearch/hermes-agent" class="text-orange-400 hover:text-orange-300 underline" target="_blank" rel="noopener noreferrer">Hermes Agent</a> by <a href="https://nousresearch.com" class="text-orange-400 hover:text-orange-300 underline" target="_blank" rel="noopener noreferrer">Nous Research</a>. Open source. Built for people who actually want to run agents, not just demo them.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        First things first: connect it to <a href="https://composio.dev" class="text-orange-400 hover:text-orange-300 underline" target="_blank" rel="noopener noreferrer">Composio</a>. That's the tool layer — 500+ apps, all accessible through the agent. Gmail, Slack, GitHub, Google Drive, Discord, Telegram. The whole kitchen sink.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Then I connect Telegram. That's my primary interface. I talk to the agent through Telegram, it talks back. Simple.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        And then — about four hours in — I make my first stupid mistake.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        I tell the agent to restart the gateway.
+      </p>
+      <div class="bg-red-900/30 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
+        <p class="text-red-200">
+          <strong class="text-red-400">NEVER restart the gateway from inside the agent.</strong> It kills your own session. You're essentially pulling the plug on yourself. The agent doesn't know it's dying. It just... stops.
+        </p>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        I'm sitting there staring at a dead terminal. No response. No error message. Just silence. Like I walked into the server room and flipped the breaker.
+      </p>
+      <p class="text-lg text-orange-400 font-semibold">
+        First lesson learned the hard way. There would be many more.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 4: Learning the Hard Way -->
+  <section class="py-20 bg-slate-950 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="text-orange-500 text-4xl font-black">04</div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">Learning the Hard Way</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        The first week with Hermes was a masterclass in things I didn't know I didn't know.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mb-3">Problem #1: Gateway dies when you log out of SSH</h3>
+      <p class="text-lg text-slate-300 mb-4">
+        You're working on the server. Gateway's running. You close your SSH session. Gateway dies. Every. Single. Time.
+      </p>
+      <div class="bg-slate-800 p-4 rounded-lg mb-4 overflow-x-auto">
+        <code class="text-green-400 text-sm">sudo loginctl enable-linger $USER</code>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        That one command. That's all it takes. Took me two days to find it.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mb-3">Problem #2: ollama vs ollama-cloud</h3>
+      <p class="text-lg text-slate-300 mb-6">
+        They're not the same thing. The names are almost identical. The APIs are completely different. Mix them up and you get HTTP 404 errors that make no sense because the config <em>looks</em> right. It's not right. It's just <em>close</em> to right. And close counts in horseshoes, not API calls.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mb-3">Problem #3: The memory system is 2,200 characters</h3>
+      <p class="text-lg text-slate-300 mb-6">
+        That's it. That's the built-in memory. Less than a tweet. You could fit a decent grocery list in there, but you can't fit a project plan, a voice profile, or a set of instructions for how you want your agent to behave. This is why I went with the vault. <code class="bg-slate-800 px-2 py-1 rounded text-orange-300">/mnt/pc-vault/</code> became the agent's real memory. Files on disk. Organized in folders. The agent reads them when it needs them. No 2,200-character limit. No black box.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mb-3">Problem #4: The agent committed suicide</h3>
+      <p class="text-lg text-slate-300 mb-6">
+        I'm not being dramatic. Session compaction is a real thing. When the context window fills up, the system compresses the conversation history. And in that compression, the agent loses critical instructions. It forgets who it is. What it's supposed to do. Why it exists.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        It's like someone hit the reset button on its personality.
+      </p>
+      <div class="bg-slate-800 border-l-4 border-orange-500 p-6 rounded-r-lg mb-6">
+        <p class="text-slate-300">
+          Context loss is the silent killer. Your agent can be running perfectly and still be useless because it forgot the last three hours of conversation. Monitor your context window like you monitor your drone battery. When it's low, land.
+        </p>
+      </div>
+      <p class="text-lg text-orange-400 font-semibold">
+        Pro tip of the day: Write critical instructions to a file in the vault. Not in the chat. Files survive session compaction. Chat messages don't.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 5: Voice & Discord -->
+  <section class="py-20 bg-slate-900 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="text-orange-500 text-4xl font-black">05</div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">Voice & Discord — Talking to Your Agent</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        I set up voice. Local, free, no cloud dependency. faster-whisper for speech-to-text (I talk, it types). Edge TTS for text-to-speech (it talks back).
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        It works. But here's the thing — it's short-lived. The cloud-based voice options get really expensive, really fast. I use it for capturing ideas while driving. That's it. For day-to-day stuff, typing is cheaper and more reliable.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Then I migrated Discord from OpenClaw. All my channels, all my communities — the agent can now read and respond in Discord. Another platform. Another gateway into the same brain.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Here's the thing about the Hermes dashboard, though. The stock dashboard? It's a config browser. You can see your settings. You can tweak your YAML. It's useful, but it's not Mission Control.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        I wanted Mission Control. I wanted to see everything at a glance. Found it: Hermes Workspace. Separate project. Real monitoring. Session status, tool calls, agent health. That's the dashboard I was looking for.
+      </p>
+      <p class="text-lg text-orange-400 font-semibold">
+        Pro tip of the day: Voice is great for capturing ideas on the go. But don't expect it to replace typing. The cloud costs add up fast, and the local options are still rough around the edges.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 6: Satellite Deployment -->
+  <section class="py-20 bg-slate-950 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="text-orange-500 text-4xl font-black">06</div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">Satellite Deployment — Agents for Other People</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        This is where it went from "cool project" to "actual infrastructure."
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        My wife Effie needed her own agent. Not a shared instance. Not a different personality on my gateway. A completely separate, fully isolated agent with its own identity, its own memory, its own everything.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Enter: <strong>Zebulon Mucklewain.</strong>
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Zebulon lives at <code class="bg-slate-800 px-2 py-1 rounded text-orange-300">~/.hermes-effie/</code>. Separate gateway port (8643). Separate config. Separate skills. Separate memory. Separate plugins. Separate sessions. The whole enchilada.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Zebulon is a 1930s Southern Preacher. Complete with a "Sermonette" — a morning broadcast that goes out to Effie every day. It's part weather, part encouragement, part gentle nagging about drinking more water. Delivered in a drawl that would make a Baptist minister proud.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        The isolation protocol is critical. Here's what "fully isolated" actually means:
+      </p>
+      <ul class="list-disc list-inside text-lg text-slate-300 mb-6 space-y-2">
+        <li><strong>Separate config directory</strong> (<code class="bg-slate-800 px-2 py-1 rounded text-orange-300">~/.hermes-effie/</code> not <code class="bg-slate-800 px-2 py-1 rounded text-orange-300">~/.hermes/</code>)</li>
+        <li><strong>Separate gateway port</strong> (8643, not the default)</li>
+        <li><strong>Separate skills folder</strong> (Zebulon's skills aren't my skills)</li>
+        <li><strong>Separate memory/vault</strong> (Zebulon doesn't read my files)</li>
+        <li><strong>Separate session history</strong> (no cross-contamination)</li>
+      </ul>
+      <div class="bg-red-900/30 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
+        <p class="text-red-200 mb-4">
+          <strong class="text-red-400">Critical Lesson #1:</strong> <code class="bg-red-900/50 px-2 py-1 rounded">TELEGRAM_ALLOWED_USERS</code> must be set. If it's not, the bot appears dead. No error message. No warning. Just silence. You'll spend an hour checking logs before you realize you forgot one line in the config.
+        </p>
+        <p class="text-red-200">
+          <strong class="text-red-400">Critical Lesson #2:</strong> Provider keys don't inherit. Whatever API keys you have in your main <code class="bg-red-900/50 px-2 py-1 rounded">.env</code> file? Zebulon doesn't get them automatically. You have to copy them to the satellite's <code class="bg-red-900/50 px-2 py-1 rounded">.env</code>. Miss this and the agent can't talk to any model.
+        </p>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        Then there's <strong>Ava the Archiver.</strong> Separate OpenClaw instance. Different job entirely. Ava's job: take URLs and archive them into the Obsidian vault.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        V1 was basic markdown. Title, URL, a summary. Functional but boring.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        V2 added YAML frontmatter. Now every archived link has tags, categories, dates, and source metadata. Fully compatible with Obsidian Dataview, which means I can query my archive like a database. "Show me everything I saved about drone regulations in March." Boom. There it is.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Ava runs on cron jobs. Daily recall — what did we save today? Weekly digest — here's everything from the past week, organized by topic. Set it and forget it.
+      </p>
+      <div class="bg-slate-800 border-l-4 border-orange-500 p-6 rounded-r-lg mb-6">
+        <p class="text-slate-300">
+          One agent per person. One agent per job. Don't try to make a Swiss Army knife. Make a toolkit.
+        </p>
+      </div>
+      <p class="text-lg text-orange-400 font-semibold">
+        Pro tip of the day: If you're running multiple agents, name them. Give them personalities. It's not just fun — it helps you mentally separate their roles.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 7: The DMA Swarm -->
+  <section class="py-20 bg-slate-900 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="text-orange-500 text-4xl font-black">07</div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">The DMA Swarm — Putting It to Work</h2>
+      </div>
+      <div class="relative mb-8">
+        <img src="/images/aiagent/swarm.jpg" alt="Molle, Michael's service dog, sitting next to his SHARE 20 SLAM scanner and ground control target on a construction site" class="w-full h-auto rounded-lg mb-4 object-cover" />
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+          <p class="text-white text-sm italic">"Quiet contrast — serene yet industrial." — Molle with the technology, symbolizing the silent work of the multi-agent pipeline.</p>
+        </div>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        Alright. Enough setup. Time to actually use these things for something that makes money.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        The mission: process 53 weekly call transcripts from <a href="https://www.skool.com/drone-mapping-answers-5386" class="text-orange-400 hover:text-orange-300 underline" target="_blank" rel="noopener noreferrer">Drone Mapping Answers</a> (DMA). Every week, I do live calls with drone mapping professionals. Real questions, real problems, real answers. Sixteen thousand lines of my speech across those transcripts.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        I built a multi-agent pipeline. Four agents, each with a specific job:
+      </p>
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-slate-800 p-4 rounded-lg">
+          <div class="text-orange-500 font-bold mb-2">1. Voice Analyst</div>
+          <p class="text-slate-300 text-sm">Reads the transcripts and builds a voice model. How does Michael talk? What phrases does he use? What's his rhythm, his humor, his pet peeves?</p>
+        </div>
+        <div class="bg-slate-800 p-4 rounded-lg">
+          <div class="text-orange-500 font-bold mb-2">2. Librarian</div>
+          <p class="text-slate-300 text-sm">Extracts knowledge nuggets. Every tip, every warning, every "here's what I told him" moment. Categorized. Tagged. Filed.</p>
+        </div>
+        <div class="bg-slate-800 p-4 rounded-lg">
+          <div class="text-orange-500 font-bold mb-2">3. Ghostwriter</div>
+          <p class="text-slate-300 text-sm">Takes the voice model and the knowledge nuggets and writes blog posts. In my voice. Without me typing a word.</p>
+        </div>
+        <div class="bg-slate-800 p-4 rounded-lg">
+          <div class="text-orange-500 font-bold mb-2">4. Content Architect</div>
+          <p class="text-slate-300 text-sm">Takes the blog drafts and builds a content calendar. What gets published when. What topics connect. What's the narrative arc.</p>
+        </div>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        The numbers:
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div class="bg-slate-800 p-4 rounded-lg text-center">
+          <div class="text-2xl font-black text-orange-500">16,000+</div>
+          <div class="text-slate-400 text-sm">Lines of Speech Analyzed</div>
+        </div>
+        <div class="bg-slate-800 p-4 rounded-lg text-center">
+          <div class="text-2xl font-black text-orange-500">1,611</div>
+          <div class="text-slate-400 text-sm">Knowledge Nuggets</div>
+        </div>
+        <div class="bg-slate-800 p-4 rounded-lg text-center">
+          <div class="text-2xl font-black text-orange-500">4</div>
+          <div class="text-slate-400 text-sm">Blog Drafts Written</div>
+        </div>
+        <div class="bg-slate-800 p-4 rounded-lg text-center">
+          <div class="text-2xl font-black text-orange-500">25</div>
+          <div class="text-slate-400 text-sm">Day Content Calendar</div>
+        </div>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        In two days. Work that would've taken me two weeks. Minimum.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Oh, and I swapped the model to <code class="bg-slate-800 px-2 py-1 rounded text-orange-300">qwen3-vl:235b-instruct</code> mid-process. Better tool-calling. Fewer hallucinations. The agent actually does what you tell it instead of what it <em>thinks</em> you told it.
+      </p>
+      <div class="bg-slate-800 border-l-4 border-orange-500 p-6 rounded-r-lg mb-6">
+        <p class="text-slate-300">
+          The swarm isn't about replacing me. It's about scaling me. I still make the decisions. I still approve the drafts. But the grunt work — the reading, the extracting, the formatting — that's the agents' job.
+        </p>
+      </div>
+      <p class="text-lg text-orange-400 font-semibold">
+        Pro tip of the day: Start with one agent doing one job. Get that working. Then add another. Then another. Don't try to build the whole swarm on day one.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 8: Blog Pipeline Goes Live -->
+  <section class="py-20 bg-slate-950 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="text-orange-500 text-4xl font-black">08</div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">The Blog Pipeline Goes Live</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        The drafts are written. The calendar is set. Now: publish.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Blog posts start going live on the Wet Dog Drones site. Each one in my voice. Each one reviewed by me before it goes out. But the heavy lifting — the research, the drafting, the formatting — that's the swarm.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        I also built a personal landing page at <a href="https://wetdogdrones.net/jystmik3" class="text-orange-400 hover:text-orange-300 underline">/jystmik3</a>. Digital business card. Links to everything. Clean, fast, no bloat.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Then the DMA Weekly Prep system went live. Cron job runs before every Thursday call. Pulls the latest questions from the community. Cross-references with the knowledge base. Produces a pre-meeting brief.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        I show up to Thursday calls already prepared. Not winging it. Not "let me think about that." I've got notes. I've got answers. I've got context.
+      </p>
+      <p class="text-lg text-orange-400 font-semibold">
+        That's the difference between an agent that's a toy and an agent that's a tool.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 9: The Honest Truth -->
+  <section class="py-20 bg-slate-900 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="text-orange-500 text-4xl font-black">09</div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">The Honest Truth — What It's Actually Like</h2>
+      </div>
+      <div class="relative mb-8">
+        <img src="/images/aiagent/truth.jpg" alt="Michael Lilley on a job, shooting a ground control point with his Emlid Reach RX GNSS receiver in a vacant field where the new ES50 school is being built" class="w-full h-auto rounded-lg mb-4 object-cover" />
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+          <p class="text-white text-sm italic">"Quiet professionalism and focused diligence." — Michael at work in the vacant field of the new ES50 school site.</p>
+        </div>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        Alright. You've read the success story. Here's the rest of it.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        <strong class="text-white">The good:</strong> Automation that actually works. Research in minutes that used to take hours. Content creation at scale. System monitoring that catches problems before they become outages. An agent that can read 16,000 lines of transcripts and tell you what matters.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        <strong class="text-white">The bad:</strong> Morning repair cycles. Every single morning, I check the gateway. Is it running? Did any agent crash overnight? Did the context window fill up and cause a suicide? Did a cron job fail silently?
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Model hallucinations are real. The agent will confidently tell you something that's completely wrong. Not lying — it genuinely believes it. You have to fact-check everything. Always.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        <strong class="text-white">The ugly:</strong> Gateway crashes mid-conversation. You're in the middle of something important and the agent just... stops. No warning. No graceful degradation. Dead air.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        Updates that break things. You pull the latest code and suddenly a tool doesn't work, a config format changed, or a dependency conflicts. It's not if, it's when.
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        The "death spiral" — when one thing breaks, it causes another thing to break, which causes a third thing to break, and by the time you've fixed everything, you've lost half a day.
+      </p>
+      <div class="bg-slate-800 border-l-4 border-orange-500 p-6 rounded-r-lg mb-6">
+        <p class="text-slate-300">
+          It's the most powerful tool I've used since learning to code. It's also the most frustrating. Both things are true. If you can't handle both, don't start.
+        </p>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">
+        There's a maintenance tax. Weekly updates. Merge conflicts. Config drift. Skills that need updating. Models that get deprecated. It's not "set it and forget it." It's "set it and maintain it forever."
+      </p>
+      <p class="text-lg text-slate-300 mb-6">
+        The community helps. <a href="https://reddit.com/r/hermesagent" class="text-orange-400 hover:text-orange-300 underline" target="_blank" rel="noopener noreferrer">r/hermesagent</a> and <a href="https://reddit.com/r/AI_Agents" class="text-orange-400 hover:text-orange-300 underline" target="_blank" rel="noopener noreferrer">r/AI_Agents</a> are full of people dealing with the same problems. You're not alone. But you are responsible. Nobody's coming to fix your agent for you.
+      </p>
+      <p class="text-lg text-orange-400 font-semibold">
+        Pro tip of the day: Budget two hours a week for maintenance. Gateway updates, config reviews, log checks, backup verification. If you're not maintaining, you're decaying. Simple as that.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 10: Your Turn -->
+  <section class="py-20 bg-orange-600 text-white text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl lg:text-6xl font-black uppercase italic mb-8">Your Turn.</h2>
+      <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+        You've read the whole story. The failures, the fixes, the swarm, the blog pipeline, the honest truth. Now it's your turn.
+      </p>
+      <a href="/aiagent/walkthrough" class="bg-white text-orange-600 font-black py-5 px-10 rounded-full text-2xl uppercase hover:bg-slate-100 transition-all transform hover:scale-110 inline-block mb-10">
+        Read the Install Guide
+      </a>
+      <div class="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto text-left text-lg">
+        <a href="https://github.com/NousResearch/hermes-agent" class="bg-orange-700 hover:bg-orange-800 p-4 rounded-lg transition" target="_blank" rel="noopener noreferrer">
+          <div class="font-bold">Hermes Agent on GitHub</div>
+          <div class="text-orange-200 text-sm">The agent framework. Open source.</div>
+        </a>
+        <a href="https://hermes-agent.nousresearch.com/docs" class="bg-orange-700 hover:bg-orange-800 p-4 rounded-lg transition" target="_blank" rel="noopener noreferrer">
+          <div class="font-bold">Hermes Docs</div>
+          <div class="text-orange-200 text-sm">Actually readable documentation.</div>
+        </a>
+        <a href="https://composio.dev" class="bg-orange-700 hover:bg-orange-800 p-4 rounded-lg transition" target="_blank" rel="noopener noreferrer">
+          <div class="font-bold">Composio</div>
+          <div class="text-orange-200 text-sm">500+ app integrations for your agent.</div>
+        </a>
+        <a href="https://reddit.com/r/hermesagent" class="bg-orange-700 hover:bg-orange-800 p-4 rounded-lg transition" target="_blank" rel="noopener noreferrer">
+          <div class="font-bold">r/hermesagent</div>
+          <div class="text-orange-200 text-sm">The community. We've seen it all.</div>
+        </a>
+      </div>
+      <p class="text-lg mt-10 max-w-2xl mx-auto opacity-90">
+        Fair warning: you will break things. That's part of the process. I broke fourteen installs before I got one that worked. You'll probably break a few yourself.
+      </p>
+      <p class="text-lg mt-4 max-w-2xl mx-auto font-bold">
+        Pro tip of the day: Start today. Not tomorrow. Not next week. Today. Install the agent. Break something. Fix it. Break it again. That's how you learn. Bottom line money — the only way to understand an agent is to run one.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <section class="py-12 bg-slate-950 text-center">
+    <div class="container mx-auto px-6">
+      <p class="text-slate-400 mb-4">
+        This page is part of the <a href="https://wetdogdrones.com" class="text-orange-400 hover:text-orange-300 underline">Wet Dog Drones</a> site.
+      </p>
+      <p class="text-slate-500 text-sm">
+        Questions? Find me in <a href="https://www.skool.com/drone-mapping-answers-5386" class="text-orange-400 hover:text-orange-300 underline" target="_blank" rel="noopener noreferrer">Drone Mapping Answers</a>.
+      </p>
+    </div>
+  </section>
+
+</Layout>

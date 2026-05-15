@@ -1,0 +1,478 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Install Your Own AI Agent — Step by Step | Wet Dog Drones"
+  description="A complete step-by-step guide to installing Hermes Agent on Linux, macOS, or WSL2. Copy-paste commands, common pitfalls, and the things I wish someone had told me on day one. By Michael Lilley.">
+
+  <!-- Hero Section -->
+  <section class="relative bg-slate-950 text-white py-24 lg:py-32 overflow-hidden border-b border-slate-800">
+    <div class="absolute inset-0 z-0 opacity-10">
+      <div class="w-full h-full bg-gradient-to-br from-orange-600 to-slate-900"></div>
+    </div>
+    <div class="container mx-auto px-6 relative z-10 text-center">
+      <p class="text-orange-500 font-bold uppercase tracking-widest mb-4 text-sm">The Install Guide</p>
+      <h1 class="text-4xl lg:text-6xl xl:text-7xl font-black italic uppercase tracking-tighter mb-6">
+        Install Your Own <span class="text-orange-500">AI Agent.</span>
+      </h1>
+      <h2 class="text-2xl lg:text-3xl font-bold text-slate-300 mb-6">
+        Step by Step.
+      </h2>
+      <p class="text-lg lg:text-xl max-w-3xl mx-auto text-slate-400 leading-relaxed mb-10">
+        Eleven steps. Copy-paste commands. All the gotchas I learned the hard way. If you read the <a href="/aiagent" class="text-orange-400 hover:text-orange-300 underline">story</a>, this is the "how."
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#step-1" class="bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 px-8 rounded-lg transition-all transform hover:scale-105 text-lg">
+          Start at Step 1
+        </a>
+        <a href="#pitfalls" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-8 rounded-lg transition-all text-lg">
+          Jump to Common Pitfalls
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before You Start: Gather Your Keys -->
+  <section class="py-16 bg-slate-900 text-slate-200 border-b border-slate-800">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-2xl lg:text-3xl font-bold text-white mb-4">Before You Start: Gather Your Keys</h2>
+      <p class="text-lg text-slate-300 mb-6">Some steps in this walkthrough need API keys or tokens. Getting them <em>before</em> you start is way easier than stopping mid-install to go sign up for stuff. Here's everything you'll need:</p>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-700">
+              <th class="py-3 px-4 text-orange-500 font-bold">Service</th>
+              <th class="py-3 px-4 text-orange-500 font-bold">What You Need</th>
+              <th class="py-3 px-4 text-orange-500 font-bold">Link</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-300">
+            <tr class="border-b border-slate-800">
+              <td class="py-3 px-4">OpenRouter</td>
+              <td class="py-3 px-4">API key (free tier works)</td>
+              <td class="py-3 px-4"><a href="https://openrouter.ai" class="text-orange-400 underline" target="_blank" rel="noopener noreferrer">openrouter.ai</a></td>
+            </tr>
+            <tr class="border-b border-slate-800">
+              <td class="py-3 px-4">Ollama Cloud</td>
+              <td class="py-3 px-4">API key (paid, ~$20/mo — optional alternative to OpenRouter)</td>
+              <td class="py-3 px-4"><a href="https://ollama.com" class="text-orange-400 underline" target="_blank" rel="noopener noreferrer">ollama.com</a></td>
+            </tr>
+            <tr class="border-b border-slate-800">
+              <td class="py-3 px-4">Telegram</td>
+              <td class="py-3 px-4">Bot token (via @BotFather)</td>
+              <td class="py-3 px-4"><a href="https://t.me/BotFather" class="text-orange-400 underline" target="_blank" rel="noopener noreferrer">t.me/BotFather</a></td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4">Composio</td>
+              <td class="py-3 px-4">Account (optional — connects Gmail, GitHub, Reddit, etc.)</td>
+              <td class="py-3 px-4"><a href="https://composio.dev" class="text-orange-400 underline" target="_blank" rel="noopener noreferrer">composio.dev</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
+        <p class="text-blue-200">
+          <strong class="text-blue-400">Tip:</strong> You don't need all of these on day one. At minimum, you need <strong>one</strong> model provider key (OpenRouter <em>or</em> Ollama Cloud) and a <strong>Telegram bot token</strong>. Composio can wait.
+        </p>
+      </div>
+      <a href="/downloads/api-keys-checklist.ods" download class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-lg transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+        Download Keys Checklist (.ods)
+      </a>
+    </div>
+  </section>
+
+  <!-- Step 1: What You Need -->
+  <section id="step-1" class="py-16 bg-slate-900 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="text-orange-500 text-3xl font-black">01</div>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white">What You Need</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">Before you touch a terminal, make sure you've got the basics:</p>
+      <ul class="list-disc list-inside text-lg text-slate-300 mb-6 space-y-2">
+        <li><strong>A computer</strong> running Linux, macOS, or WSL2 (Windows Subsystem for Linux)</li>
+        <li><strong>An internet connection</strong> — your agent lives online</li>
+        <li><strong>About 30 minutes</strong> — less if you've done this kind of thing before</li>
+      </ul>
+      <div class="bg-amber-900/30 border-l-4 border-amber-500 p-6 rounded-r-lg mb-6">
+        <p class="text-amber-200">
+          <strong class="text-amber-400">Surface laptop users:</strong> I'm going to be real with you. WSL2 works, but it's a layer on top of Windows that was never designed for this. You'll spend more time debugging WSL than using your agent. Wipe it, install <a href="https://ubuntu.com/download" class="text-amber-400 underline" target="_blank" rel="noopener noreferrer">Ubuntu</a>, and start clean. You'll thank me later.
+        </p>
+      </div>
+      <div class="bg-slate-800 border-l-4 border-blue-500 p-6 rounded-r-lg">
+        <p class="text-slate-300">
+          <strong class="text-white">NAS users</strong> (same as me — Ugreen, running Linux): You're already in good shape. This stuff was born on Linux. It'll feel like home.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 2: Install Hermes -->
+  <section class="py-16 bg-slate-950 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="text-orange-500 text-3xl font-black">02</div>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white">Install Hermes</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">Here's the one-liner that does all the heavy lifting:</p>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash</code>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">What this does: clones the repo, sets up a Python virtual environment, installs all the dependencies. Voodoo blackmagic stuff happening behind the curtain.</p>
+      <p class="text-lg text-slate-300 mb-4">After it finishes, run:</p>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">hermes doctor</code>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">This checks your setup and tells you what's working and what's not.</p>
+      <div class="bg-amber-900/30 border-l-4 border-amber-500 p-6 rounded-r-lg">
+        <p class="text-amber-200">
+          <strong class="text-amber-400">Warning:</strong> This installs the latest version from the main branch. If something broke in the last commit, you're the one who finds it. If things go sideways, check the <a href="https://hermes-agent.nousresearch.com/docs" class="text-amber-400 underline" target="_blank" rel="noopener noreferrer">docs</a> or <a href="https://reddit.com/r/hermesagent" class="text-amber-400 underline" target="_blank" rel="noopener noreferrer">the subreddit</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 3: Run the Setup Wizard -->
+  <section class="py-16 bg-slate-900 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="text-orange-500 text-3xl font-black">03</div>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white">Run the Setup Wizard</h2>
+      </div>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">hermes setup</code>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">This walks you through the basics: model provider, API keys, terminal settings. It creates your <code class="bg-slate-800 px-2 py-1 rounded text-orange-300">config.yaml</code> and <code class="bg-slate-800 px-2 py-1 rounded text-orange-300">.env</code> files — the two files that control everything.</p>
+      <p class="text-lg text-slate-300 mb-4">Don't skip this. I know you want to skip this. You'll create the config manually and miss a setting and spend an hour wondering why nothing works.</p>
+      <div class="bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg">
+        <p class="text-blue-200">
+          <strong class="text-blue-400">Tip:</strong> If you gathered your keys from the table above, you're already set. If not, go get them now, then run <code class="bg-blue-900/50 px-2 py-1 rounded">hermes setup</code>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 4: Choose Your Brain -->
+  <section class="py-16 bg-slate-950 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="text-orange-500 text-3xl font-black">04</div>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white">Choose Your Brain (Model Provider)</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-6">Your agent needs a model to think. This is the "brain" — the thing that actually reads your messages and writes back. You've got three options:</p>
+      <div class="grid md:grid-cols-3 gap-4 mb-6">
+        <div class="bg-slate-800 p-6 rounded-lg">
+          <h3 class="text-orange-500 font-bold mb-2">Free</h3>
+          <p class="text-white font-semibold mb-1">OpenRouter</p>
+          <p class="text-slate-400 text-sm mb-2">Model: owl-alpha</p>
+          <p class="text-slate-400 text-sm">Rate limits apply. Good for testing.</p>
+          <a href="https://openrouter.ai" class="text-orange-400 text-sm underline mt-2 inline-block" target="_blank" rel="noopener noreferrer">openrouter.ai</a>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-lg border border-orange-500">
+          <h3 class="text-orange-500 font-bold mb-2">Recommended</h3>
+          <p class="text-white font-semibold mb-1">Ollama Cloud Pro</p>
+          <p class="text-slate-400 text-sm mb-2">~$20/mo, 40+ models</p>
+          <p class="text-slate-400 text-sm">Reliable. Fast. No rate limits.</p>
+          <a href="https://ollama.com" class="text-orange-400 text-sm underline mt-2 inline-block" target="_blank" rel="noopener noreferrer">ollama.com</a>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-lg">
+          <h3 class="text-orange-500 font-bold mb-2">Local</h3>
+          <p class="text-white font-semibold mb-1">Ollama (self-hosted)</p>
+          <p class="text-slate-400 text-sm mb-2">Free, needs your own GPU</p>
+          <p class="text-slate-400 text-sm">Not an option if your GPU is busy.</p>
+        </div>
+      </div>
+      <div class="bg-red-900/30 border-l-4 border-red-500 p-6 rounded-r-lg">
+        <p class="text-red-200">
+          <strong class="text-red-400">CRITICAL:</strong> <code class="bg-red-900/50 px-2 py-1 rounded">ollama</code> and <code class="bg-red-900/50 px-2 py-1 rounded">ollama-cloud</code> are <strong>NOT</strong> the same provider. Different API endpoints. Different auth. Different everything. Pick the wrong one and you'll get HTTP 404 on every request. This is the #1 support question on <a href="https://reddit.com/r/hermesagent" class="text-red-400 underline" target="_blank" rel="noopener noreferrer">r/hermesagent</a>. Get this right the first time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 5: Connect Telegram -->
+  <section class="py-16 bg-slate-900 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="text-orange-500 text-3xl font-black">05</div>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white">Connect Telegram</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">This is how you actually talk to your agent. Through Telegram, like texting a friend.</p>
+      <ol class="list-decimal list-inside text-lg text-slate-300 mb-6 space-y-3">
+        <li>Open Telegram, message <strong>@BotFather</strong></li>
+        <li>Send <code class="bg-slate-800 px-2 py-1 rounded text-orange-300">/newbot</code>, follow the prompts</li>
+        <li>You'll get a <strong>bot token</strong> — long string of letters and numbers</li>
+        <li>Add it to your <code class="bg-slate-800 px-2 py-1 rounded text-orange-300">.env</code> file:</li>
+      </ol>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">TELEGRAM_BOT_TOKEN=your_token_here</code>
+      </div>
+      <ol class="list-decimal list-inside text-lg text-slate-300 mb-6 space-y-3" start="5">
+        <li>Start the gateway:</li>
+      </ol>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">hermes gateway start</code>
+      </div>
+      <ol class="list-decimal list-inside text-lg text-slate-300 mb-6 space-y-3" start="6">
+        <li>Verify it's connected:</li>
+      </ol>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">grep "telegram connected" ~/.hermes/logs/gateway.log</code>
+      </div>
+      <div class="bg-red-900/30 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
+        <p class="text-red-200">
+          <strong class="text-red-400">CRITICAL:</strong> Set <code class="bg-red-900/50 px-2 py-1 rounded">TELEGRAM_ALLOWED_USERS=your_chat_id</code> in your <code class="bg-red-900/50 px-2 py-1 rounded">.env</code>. Without this, your bot connects to Telegram but ignores every message. The log says "connected." Nothing works. This is the #2 support question. Set this. Do it now.
+        </p>
+      </div>
+      <div class="bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg">
+        <p class="text-blue-200">
+          <strong class="text-blue-400">Tip:</strong> To find your <code class="bg-blue-900/50 px-2 py-1 rounded">chat_id</code>, message your bot, then open this URL in a browser (replace <code class="bg-blue-900/50 px-2 py-1 rounded">&lt;YOUR_TOKEN&gt;</code> with your actual token):
+        </p>
+        <div class="bg-slate-800 p-4 rounded-lg mt-4 overflow-x-auto">
+          <code class="text-green-400 text-sm">https://api.telegram.org/bot&lt;YOUR_TOKEN&gt;/getUpdates</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 6: First Conversation -->
+  <section class="py-16 bg-slate-950 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="text-orange-500 text-3xl font-black">06</div>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white">First Conversation</h2>
+      </div>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">hermes</code>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">That's it. Type something. Anything.</p>
+      <p class="text-lg text-slate-300 mb-4">Try: <em>"Who are you?"</em></p>
+      <p class="text-lg text-slate-300 mb-4">See if it talks back. If nothing happens:</p>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">cat ~/.hermes/logs/gateway.log</code>
+      </div>
+      <div class="bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg">
+        <p class="text-blue-200">
+          The first conversation is always awkward. Like a new employee on day one. Give it a minute. Send a few messages. It'll find its footing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 7: Persistence -->
+  <section class="py-16 bg-slate-900 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="text-orange-500 text-3xl font-black">07</div>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white">Set Up Persistence</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">Right now, if you close your terminal or reboot, the gateway dies. Here's how to make it survive:</p>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">hermes gateway install<br/>systemctl --user start hermes-gateway</code>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">This installs the gateway as a systemd service. It'll start automatically on boot.</p>
+      <div class="bg-amber-900/30 border-l-4 border-amber-500 p-6 rounded-r-lg mb-6">
+        <p class="text-amber-200 mb-4">
+          <strong class="text-amber-400">SSH users:</strong> Also run:
+        </p>
+        <div class="bg-slate-800 p-4 rounded-lg overflow-x-auto">
+          <code class="text-green-400 text-sm">sudo loginctl enable-linger $USER</code>
+        </div>
+        <p class="text-amber-200 mt-4">Without this, systemd kills your user services when you disconnect. Your gateway dies every time you close your SSH session.</p>
+      </div>
+      <div class="bg-amber-900/30 border-l-4 border-amber-500 p-6 rounded-r-lg">
+        <p class="text-amber-200">
+          <strong class="text-amber-400">WSL2 users:</strong> Make sure <code class="bg-amber-900/50 px-2 py-1 rounded">systemd=true</code> is set in <code class="bg-amber-900/50 px-2 py-1 rounded">/etc/wsl.conf</code>. Without it, systemd doesn't start and none of the above works.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 8: Composio -->
+  <section class="py-16 bg-slate-950 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="text-orange-500 text-3xl font-black">08</div>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white">Connect Composio</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">Your agent can think. But without Composio, it can't <em>do</em> much. It's like having a smart employee with no phone, no email, and no internet.</p>
+      <ol class="list-decimal list-inside text-lg text-slate-300 mb-6 space-y-3">
+        <li>Go to <a href="https://composio.dev" class="text-orange-400 underline" target="_blank" rel="noopener noreferrer">composio.dev</a> and create an account</li>
+        <li>Connect the apps you want: Gmail, GitHub, Reddit, Google Drive, Slack, whatever</li>
+        <li>Add the Composio MCP server to your Hermes config</li>
+      </ol>
+      <p class="text-lg text-slate-300 mb-4">Why bother? Reddit blocks direct HTTP requests. GitHub has rate limits. Composio handles all of that — auth, rate limiting, API changes.</p>
+      <p class="text-lg text-orange-400 font-semibold">Without Composio, your agent is blind to half the internet. With it, it can see everything.</p>
+    </div>
+  </section>
+
+  <!-- Step 9: Skills -->
+  <section class="py-16 bg-slate-900 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="text-orange-500 text-3xl font-black">09</div>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white">Add Skills</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">See what's available:</p>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">hermes skills browse</code>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">Install one:</p>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">hermes skills install &lt;skill-name&gt;</code>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">Skills are like training manuals for your agent. They teach it how to do specific things — manage GitHub, post to Spotify, interact with your calendar.</p>
+      <div class="bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg">
+        <p class="text-blue-200">
+          <strong class="text-blue-400">Tip:</strong> Start with the built-in skills. Get comfortable. Add more later. You wouldn't hand a new hire the entire company handbook on day one.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 10: Cron Jobs -->
+  <section class="py-16 bg-slate-950 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="text-orange-500 text-3xl font-black">10</div>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white">Set Up Cron Jobs</h2>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">Want your agent to do things on a schedule? Daily briefings, weekly reports, monitoring — cron jobs handle that.</p>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">hermes cron create "0 8 * * *"</code>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">That example runs at 8 AM every day. You define what it does when you create the job.</p>
+      <div class="bg-amber-900/30 border-l-4 border-amber-500 p-6 rounded-r-lg">
+        <p class="text-amber-200">
+          <strong class="text-amber-400">Warning:</strong> Free OpenRouter models have tight rate limits. Cron jobs will hit HTTP 429. Use Ollama Cloud for anything scheduled.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 11: Updates -->
+  <section class="py-16 bg-slate-900 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="text-orange-500 text-3xl font-black">11</div>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white">Updates (The Inevitable)</h2>
+      </div>
+      <div class="bg-slate-800 p-6 rounded-lg mb-6 overflow-x-auto">
+        <code class="text-green-400 text-sm">hermes update</code>
+      </div>
+      <div class="bg-red-900/30 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
+        <p class="text-red-200">
+          <strong class="text-red-400">CRITICAL:</strong> <code class="bg-red-900/50 px-2 py-1 rounded">hermes update</code> <strong>RESTARTS THE GATEWAY AUTOMATICALLY.</strong> Your session <strong>WILL DIE.</strong> If you run this from inside the agent, you're pulling the rug out from under yourself. Use a separate terminal. Always.
+        </p>
+      </div>
+      <p class="text-lg text-slate-300 mb-4">After updating:</p>
+      <ul class="list-disc list-inside text-lg text-slate-300 mb-6 space-y-2">
+        <li>Check <code class="bg-slate-800 px-2 py-1 rounded text-orange-300">config.yaml</code> — model settings sometimes reset to defaults</li>
+        <li>Check custom files for merge conflicts</li>
+      </ul>
+      <div class="bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg">
+        <p class="text-blue-200">
+          <strong class="text-blue-400">Tip:</strong> Before you update, back up your config:
+        </p>
+        <div class="bg-slate-800 p-4 rounded-lg mt-4 overflow-x-auto">
+          <code class="text-green-400 text-sm">cp ~/.hermes/config.yaml ~/config-backup.yaml</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Pitfalls -->
+  <section id="pitfalls" class="py-20 bg-slate-950 text-slate-200">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-8">Common Pitfalls</h2>
+      <p class="text-lg text-slate-300 mb-8">I've seen these come up over and over. Read this section. It'll save you a trip to the subreddit.</p>
+      <div class="space-y-4">
+        <div class="bg-red-900/20 border-l-4 border-red-500 p-6 rounded-r-lg">
+          <p class="text-red-200"><strong class="text-red-400">1. NEVER restart the gateway from inside the agent.</strong> It kills your own session. Use a separate shell. Every time.</p>
+        </div>
+        <div class="bg-red-900/20 border-l-4 border-red-500 p-6 rounded-r-lg">
+          <p class="text-red-200"><strong class="text-red-400">2. ollama ≠ ollama-cloud.</strong> Different providers. Wrong one in your config = HTTP 404 on every request. Check your config. Check it again.</p>
+        </div>
+        <div class="bg-amber-900/20 border-l-4 border-amber-500 p-6 rounded-r-lg">
+          <p class="text-amber-200"><strong class="text-amber-400">3. TELEGRAM_ALLOWED_USERS must be set.</strong> Without it, your bot connects to Telegram but ignores everyone. The log says "connected." Nothing works.</p>
+        </div>
+        <div class="bg-amber-900/20 border-l-4 border-amber-500 p-6 rounded-r-lg">
+          <p class="text-amber-200"><strong class="text-amber-400">4. Free OpenRouter models have rate limits.</strong> Cron jobs will hit HTTP 429. Use Ollama Cloud for scheduled tasks.</p>
+        </div>
+        <div class="bg-amber-900/20 border-l-4 border-amber-500 p-6 rounded-r-lg">
+          <p class="text-amber-200"><strong class="text-amber-400">5. sudo pip install will fail</strong> on locked-down systems. Use the venv Python path instead.</p>
+        </div>
+        <div class="bg-amber-900/20 border-l-4 border-amber-500 p-6 rounded-r-lg">
+          <p class="text-amber-200"><strong class="text-amber-400">6. Reddit blocks direct HTTP.</strong> Always use Composio tools for Reddit.</p>
+        </div>
+        <div class="bg-amber-900/20 border-l-4 border-amber-500 p-6 rounded-r-lg">
+          <p class="text-amber-200"><strong class="text-amber-400">7. Memory is only 2,200 characters.</strong> Use external storage for anything important.</p>
+        </div>
+        <div class="bg-blue-900/20 border-l-4 border-blue-500 p-6 rounded-r-lg">
+          <p class="text-blue-200"><strong class="text-blue-400">8. hermes update restarts the gateway.</strong> Always warn yourself before running it. Separate terminal.</p>
+        </div>
+        <div class="bg-blue-900/20 border-l-4 border-blue-500 p-6 rounded-r-lg">
+          <p class="text-blue-200"><strong class="text-blue-400">9. Satellite instances need their own .env keys.</strong> They don't inherit from the main instance.</p>
+        </div>
+        <div class="bg-blue-900/20 border-l-4 border-blue-500 p-6 rounded-r-lg">
+          <p class="text-blue-200"><strong class="text-blue-400">10. Gateway shows "telegram connected" even with no API key.</strong> Check your provider keys separately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="py-20 bg-orange-600 text-white text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl lg:text-6xl font-black uppercase italic mb-8">That's It.</h2>
+      <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+        You've got a working AI agent running on your own hardware. It talks through Telegram, it can browse the internet, check your email, manage your GitHub — whatever you set it up to do.
+      </p>
+      <div class="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto text-left text-lg mb-10">
+        <a href="https://github.com/NousResearch/hermes-agent" class="bg-orange-700 hover:bg-orange-800 p-4 rounded-lg transition" target="_blank" rel="noopener noreferrer">
+          <div class="font-bold">Hermes Agent GitHub</div>
+          <div class="text-orange-200 text-sm">The agent framework. Open source.</div>
+        </a>
+        <a href="https://hermes-agent.nousresearch.com/docs" class="bg-orange-700 hover:bg-orange-800 p-4 rounded-lg transition" target="_blank" rel="noopener noreferrer">
+          <div class="font-bold">Hermes Docs</div>
+          <div class="text-orange-200 text-sm">Actually readable documentation.</div>
+        </a>
+        <a href="https://reddit.com/r/hermesagent" class="bg-orange-700 hover:bg-orange-800 p-4 rounded-lg transition" target="_blank" rel="noopener noreferrer">
+          <div class="font-bold">r/hermesagent</div>
+          <div class="text-orange-200 text-sm">The community. We've seen it all.</div>
+        </a>
+        <a href="https://reddit.com/r/AI_Agents" class="bg-orange-700 hover:bg-orange-800 p-4 rounded-lg transition" target="_blank" rel="noopener noreferrer">
+          <div class="font-bold">r/AI_Agents</div>
+          <div class="text-orange-200 text-sm">Broader AI agent community.</div>
+        </a>
+      </div>
+      <p class="text-lg max-w-2xl mx-auto opacity-90">
+        Fair warning: you will break things. That's part of the process. The guys on the subreddit have seen it all. Don't be afraid to ask.
+      </p>
+      <p class="text-lg mt-6 max-w-2xl mx-auto font-bold">
+        Pro tip of the day: Before you ask the internet, ask your agent. It might just know. And if it doesn't, it'll find out. That's the whole point.
+      </p>
+      <p class="text-lg mt-6 max-w-2xl mx-auto opacity-90">
+        One last thing — don't use this like you would Google. It will waste your tokens. Save the "what time does the parts store open" questions for the search engines. This is more than that. Go build things, and see you on Thursday's call.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="py-12 bg-slate-950 text-center">
+    <div class="container mx-auto px-6">
+      <p class="text-slate-400 mb-4">
+        This page is part of the <a href="https://wetdogdrones.com" class="text-orange-400 hover:text-orange-300 underline">Wet Dog Drones</a> site.
+      </p>
+      <p class="text-slate-500 text-sm">
+        IYKYK, <a href="https://weopenatsix.com" class="text-orange-400 hover:text-orange-300 underline" target="_blank" rel="noopener noreferrer">weopenatsix.com</a>.
+      </p>
+      <p class="text-slate-500 text-sm">
+        Questions? Find me in <a href="https://www.skool.com/drone-mapping-answers-5386" class="text-orange-400 hover:text-orange-300 underline" target="_blank" rel="noopener noreferrer">Drone Mapping Answers</a>.
+      </p>
+    </div>
+  </section>
+
+</Layout>
