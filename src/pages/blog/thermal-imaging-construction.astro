@@ -1,0 +1,134 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Thermal Imaging: The Tool That Lies to You | Wet Dog Drones"
+  description="That thermal camera on your drone isn't a magic heat-vision scope. It's a radiometric instrument that will happily give you garbage data if you don't understand emissivity, reflections, and the 10x10 pixel rule.">
+
+  <!-- Article Hero -->
+  <section class="bg-slate-900 text-white py-16">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <a href="/blog" class="text-blue-400 hover:text-blue-300 transition text-sm mb-4 inline-block">&larr; Back to Blog</a>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Thermal Imaging</h1>
+      <p class="text-xl text-slate-300 mb-6">The Tool That Lies to You (Until You Learn Its Language)</p>
+      <div class="flex items-center gap-4 text-slate-400 text-sm">
+        <span>Michael Lilley</span>
+        <span>&bull;</span>
+        <span>May 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <article class="py-16">
+    <div class="container mx-auto px-4 max-w-3xl prose prose-lg prose-slate">
+
+      <p class="text-lg text-slate-600 leading-relaxed">
+        So you just dropped four grand on a thermal camera for your drone. FLIR, H20T, whatever. You flew your first roof inspection, looked at the imagery, and thought: "This is incredible. I can see everything."
+      </p>
+
+      <p class="text-lg text-slate-600 leading-relaxed">
+        Yeah. You can see everything. Including a bunch of stuff that isn't actually there.
+      </p>
+
+      <p>
+        Here's the dirty little secret about thermal imaging: the camera doesn't measure temperature. It measures infrared radiation. And infrared radiation is a liar. It bounces off reflective surfaces. It changes based on what something is made of. It varies with the angle you're looking at it and the time of day and whether it rained six hours ago. If you don't understand that, your thermal data is worse than useless -- it's confidently wrong.
+      </p>
+
+      <h2>Emissivity: The Number That Makes or Breaks Your Data</h2>
+
+      <p>
+        Every material emits infrared radiation differently. A matte black rubber roof? High emissivity -- it radiates heat efficiently and your camera reads it pretty accurately. A bare metal roof panel? Low emissivity -- it reflects more than it emits, and your camera is picking up a mix of actual heat and reflected heat from the sky, nearby buildings, the sun.
+      </p>
+
+      <p>
+        That's emissivity. It's a scale from 0 to 1, where 1 is a perfect emitter and 0 is a perfect reflector. Fresh asphalt is around 0.93. Bare aluminum is about 0.05. That's a big difference, and if your camera's emissivity setting is wrong, your temperature readings are garbage.
+      </p>
+
+      <p>
+        Most guys leave the camera on the default setting and call it a day. That's like shooting a survey with the wrong coordinate system and hoping for the best. Grab the popcorn.
+      </p>
+
+      <p>
+        Know your target material before you fly. Set the emissivity accordingly. And understand that on a mixed-surface roof -- membrane, metal flashing, gravel, skylights -- you're dealing with multiple emissivities in a single image. There's no single setting that makes it all accurate. You pick the dominant material and you note the limitations.
+      </p>
+
+      <h2>The 10x10 Pixel Rule</h2>
+
+      <p>
+        This is the one that catches everybody. Your thermal camera's resolution is not the same as your RGB camera. The Zenmuse H20T, for example, gives you 640x512 thermal resolution. That sounds decent until you realize you're covering an entire roof at altitude. Each pixel represents a much larger area than you think.
+      </p>
+
+      <p>
+        The rule of thumb -- and this is industry standard, not my opinion -- is the 10x10 pixel rule. To make a reliable temperature measurement, your target area needs to fill at least 10x10 pixels on the thermal sensor. Less than that and you're averaging the temperature of your target plus whatever is around it. You're not measuring a hotspot -- you're measuring a hotspot blurred into its surroundings.
+      </p>
+
+      <p>
+        What does that mean in practice? It means you can't fly at 200 feet and accurately measure a 6-inch patch of moisture under a membrane. You need to be closer. Lower altitude, or use the zoom. Or accept that your measurement has a margin of error wide enough to drive a truck through.
+      </p>
+
+      <p>
+        This is why thermal roof inspections are not a "fly high and spray" operation. You need to plan your altitude based on the size of the anomalies you're looking for. Looking for large-scale moisture intrusion? 100 feet might work. Looking for small leaks around penetrations? You're at 40 feet, maybe less.
+      </p>
+
+      <h2>Night Flying: The Right Way and the Wrong Way</h2>
+
+      <p>
+        Everybody wants to fly thermal at night. I get it -- it sounds cool, the imagery looks dramatic, and there's less air traffic. But the best time for a thermal roof inspection isn't midnight. It's early morning, right after sunset, or on an overcast day.
+      </p>
+
+      <p>
+        Why? Because you want thermal contrast. A roof that's been baking in the sun all day will show hot spots where moisture is trapped -- the water holds heat longer than the dry insulation. Fly at 2 AM when everything has equalized and your thermal contrast is gone. You're just taking expensive pictures of a uniform temperature surface.
+      </p>
+
+      <p>
+        The ideal window is 30 to 90 minutes after sunset. The sun's heat is still in the materials but there's no active solar loading messing up your readings. The thermal anomalies pop. Moisture shows up as warm spots against the cooling dry areas. That's when the data is clean.
+      </p>
+
+      <h2>Is It Worth the Certification Cost?</h2>
+
+      <p>
+        Here's the bottom line money question. Getting your thermography certification -- Level I, Level II -- costs time and money. We're talking a few grand and a week of training, minimum. Is it worth it?
+      </p>
+
+      <p>
+        Depends on what you're selling.
+      </p>
+
+      <p>
+        If you're selling "thermal images" to a homeowner who wants to know why their energy bill is high -- no. They don't care about your certification. They care about the pretty picture with the hot spots.
+      </p>
+
+      <p>
+        But if you're selling thermal inspection reports to a commercial property owner, a facilities manager, or an insurance adjuster -- absolutely yes. Because those clients are making decisions based on your data. Decisions about roof replacements that cost six figures. Decisions about moisture remediation. Decisions about insurance claims. And if your data is wrong, somebody's paying for it.
+      </p>
+
+      <p>
+        The certification isn't just a piece of paper. It teaches you emissivity, reflections, the 10x10 rule, atmospheric absorption, and all the ways thermal data can lie to you. It makes you dangerous -- in the right way.
+      </p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-6 my-8 not-prose">
+        <p class="font-bold text-amber-900 text-lg mb-2">Pro Tip</p>
+        <p class="text-amber-800">Before every thermal flight, write down the target material, the expected emissivity, the time of day, and the weather conditions for the last 24 hours. If you can't fill out that card, you're not ready to fly. You're just collecting pretty pictures.</p>
+      </div>
+
+      <p>
+        Thumbs up buttercup. Go learn your camera.
+      </p>
+
+      <a href="https://www.skool.com/drone-mapping-answers-5386" class="block bg-slate-900 text-white hover:bg-slate-800 transition p-8 my-12 rounded-xl not-prose no-underline">
+        <p class="text-lg text-slate-300 mb-3 font-semibold">New to thermal inspections?</p>
+        <p class="text-slate-200 leading-relaxed">Your drone camera came with a manual. It didn't come with the field knowledge to know when the data is lying to you. DMA is a room full of operators who've already made these mistakes -- and they meet every week to work through real problems from real job sites, live, every Thursday morning.</p>
+        <p class="text-blue-400 font-semibold mt-4">Join Drone Mapping Answers &rarr;</p>
+      </a>
+
+      <div class="mt-12 pt-8 border-t border-slate-200 not-prose">
+        <p class="text-slate-500 text-sm mb-4">Written by Michael Lilley, founder of Wet Dog Drones. 12 years in drones, 7 years commercially licensed. FAA Part 107 certified. Based in Colorado.</p>
+        <a href="/contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition inline-block">Let's Talk About Your Project</a>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
